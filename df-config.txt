@@ -11,8 +11,8 @@
 # ...
 
 # Window dimensions in pixels.
-window_horizontal_pixels:1024,
-window_vertical_pixels:768,
+window_horizontal_pixels:768,
+window_vertical_pixels:1024,
 
 # Window dimensions in characters.
 window_horizontal_chars:80,
@@ -23,7 +23,7 @@ font_scale:2.0,
 
 # Window background color. 
 # (Choices: black, red, green, yellow, blue, magenta, cyan, white).
-window_background_color:black,
+window_background_color:blue,
 
 # Target time for 1 game loop (in milliseconds).
 frame_time:33,

@@ -6,9 +6,9 @@ color blue
 slowdown 5
 </HEADER>
 <BODY>
->-
+O
 end
->:
+o
 end
 </BODY>
 <FOOTER>
