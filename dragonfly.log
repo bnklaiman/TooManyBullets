@@ -1,0 +1,9 @@
+21:40:27    0 ****************************************************
+21:40:27    0 ** Dragonfly version 4.16 **
+21:40:27    0 ** Game engine started **
+21:40:27    0 ****************************************************
+21:40:27    0 DisplayManager::startUp(): Already started.
+21:40:28    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
+21:40:28    0 RM::loadSprite(): Sprite 'player' loaded.
+21:40:30   54 ****************************************************
+21:40:30   54 ** Game engine stopped **

@@ -1,0 +1,16 @@
+<HEADER>
+frames 1
+width 5
+height 3
+color white
+slowdown 5
+</HEADER>
+<BODY>
+ /^\ 
+/ o \
+\___/
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>
