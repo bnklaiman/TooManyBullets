@@ -152,16 +152,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\game.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\dragonfly.log" />
+    <Text Include="..\sprites\bullet-spr.txt" />
     <Text Include="..\sprites\player-chr.txt" />
+    <Text Include="..\sprites\enemy-chr.txt" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

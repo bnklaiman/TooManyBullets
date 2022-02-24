@@ -1,22 +1,21 @@
-//
-// game.cpp
-// 
-
 // Engine includes.
 #include "DisplayManager.h"
 #include "GameManager.h"
 #include "LogManager.h"
 #include "ResourceManager.h"
 
+#include "vs-2019/Enemy.h"
 #include "vs-2019/Player.h"
 
 void loadResources() {
-	// Load player character sprite
 	RM.loadSprite("sprites/player-chr.txt", "player");
+	RM.loadSprite("sprites/enemy-chr.txt", "enemy");
+	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
 }
 
 void populateWorld() {
 	Player* player = new Player();
+	new Enemy;
 }
 
 int main(int argc, char* argv[]) {

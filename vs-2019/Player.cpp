@@ -3,6 +3,7 @@
 #include "ResourceManager.h"
 #include "DisplayManager.h"
 
+#include "Bullet.h"
 #include "Player.h"
 
 Player::Player() {
@@ -56,6 +57,10 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(moveSpeed * charWidth, 0);
 		LM.writeLog("moved: >");
 		break;
+	case df::Keyboard::Z:
+		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) fire();
+		LM.writeLog("fired");
+		break;
 	}
 }
 
@@ -67,4 +72,10 @@ void Player::move(int dx, int dy) {
 	   (new_pos.getX() > 1) && (new_pos.getX() < WM.getBoundary().getHorizontal() - 1)) {
 		WM.moveObject(this, new_pos);
 	}
+}
+
+void Player::fire() {
+	df::Vector v = df::Vector(0, -1);
+	Bullet* p = new Bullet(getPosition());
+	p->setVelocity(v);
 }

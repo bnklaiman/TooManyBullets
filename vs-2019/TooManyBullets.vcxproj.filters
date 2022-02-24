@@ -24,9 +24,18 @@
     <ClCompile Include="Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\sprites\player-chr.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\sprites\bullet-spr.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\sprites\enemy-chr.txt">
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="..\dragonfly.log">
@@ -38,6 +47,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
