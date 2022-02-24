@@ -23,8 +23,6 @@ int main(int argc, char* argv[]) {
 
 	DM.startUp();
 	DM.getWindow()->setTitle("Sample Text");
-	// sf::Vector2u dimensions = sf::Vector2u(720, 900);
-	// DM.getWindow()->setSize(dimensions);
 
 	// Start up game manager.
 	if (GM.startUp()) {
