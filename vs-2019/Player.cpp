@@ -36,13 +36,13 @@ int Player::eventHandler(const df::Event* p_e) {
 		step++;
 		if (step >= MAX_FIRE_STEPS) step = 0;
 	}
-	LM.writeLog("current step: %d", step);
+	// LM.writeLog("current step: %d", step);
 	return 0;
 }
 
 // Take appropriate action according to key pressed
 void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
-	float moveSpeed = 0.16;
+	float moveSpeed = 0.4;
 	// if slowmode
 		// movespeed *= 0.5
 	float charWidth = df::charWidth(); //DM.getHorizontalPixels() / DM.getHorizontal();
@@ -88,7 +88,7 @@ void Player::move(int dx, int dy) {
 void Player::fire() {
 	// create the illusion of rapid fire so it's not just a column of bullets (part 2)
 	if (step % MAX_FIRE_STEPS != 2) {
-		df::Vector v = df::Vector(0, -2);
+		df::Vector v = df::Vector(0, -4);
 		Bullet* p = new Bullet(getPosition());
 		p->setVelocity(v);
 	}

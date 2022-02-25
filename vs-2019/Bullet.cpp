@@ -8,7 +8,7 @@ Bullet::Bullet(df::Vector hero_pos) {
 	setType("Bullet");
 
 	// Set starting location, based on hero's position passed in
-	df::Vector p(hero_pos.getX(), hero_pos.getY() - 2);
+	df::Vector p(hero_pos.getX(), hero_pos.getY());
 	setPosition(p);
 
 	// Bullets move each game loop

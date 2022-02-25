@@ -1,1598 +1,420 @@
-15:12:22    0 ****************************************************
-15:12:22    0 ** Dragonfly version 4.16 **
-15:12:22    0 ** Game engine started **
-15:12:22    0 ****************************************************
-15:12:22    0 DisplayManager::startUp(): Already started.
-15:12:23    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
-15:12:23    0 RM::loadSprite(): Sprite 'player' loaded.
-15:12:23    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
-15:12:23    0 RM::loadSprite(): Sprite 'enemy' loaded.
-15:12:23    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-15:12:23    0 RM::loadSprite(): Sprite 'bullet' loaded.
-15:12:23   23 moved: <
-15:12:23   23 moved: <
-15:12:23   24 moved: <
-15:12:24   25 moved: <
-15:12:24   26 moved: <
-15:12:24   27 moved: <
-15:12:24   28 moved: <
-15:12:24   29 moved: <
-15:12:24   30 moved: <
-15:12:24   31 moved: ^
-15:12:24   31 moved: ^
-15:12:24   31 moved: <
-15:12:24   32 moved: ^
-15:12:24   32 moved: <
-15:12:24   33 moved: <
-15:12:24   34 moved: <
-15:12:24   35 moved: <
-15:12:24   36 moved: <
-15:12:24   37 moved: <
-15:12:24   38 moved: <
-15:12:24   39 moved: v
-15:12:24   39 fired
-15:12:24   39 moved: v
-15:12:24   39 moved: <
-15:12:24   39 fired
-15:12:24   40 moved: v
-15:12:24   40 moved: <
-15:12:24   40 fired
-15:12:24   41 moved: v
-15:12:24   41 moved: >
-15:12:24   41 moved: <
-15:12:24   41 moved: >
-15:12:24   41 fired
-15:12:24   42 moved: <
-15:12:24   42 moved: >
-15:12:24   42 fired
-15:12:24   43 moved: <
-15:12:24   43 moved: >
-15:12:24   43 fired
-15:12:24   44 moved: >
-15:12:24   44 fired
-15:12:24   45 moved: >
-15:12:24   45 fired
-15:12:24   46 moved: >
-15:12:24   46 fired
-15:12:24   47 moved: v
-15:12:24   47 moved: v
-15:12:24   47 moved: >
-15:12:24   47 fired
-15:12:24   48 moved: v
-15:12:24   48 moved: >
-15:12:24   48 fired
-15:12:24   49 moved: v
-15:12:24   49 moved: >
-15:12:24   49 fired
-15:12:24   50 moved: v
-15:12:24   50 moved: >
-15:12:24   50 fired
-15:12:24   51 moved: v
-15:12:24   51 moved: >
-15:12:24   51 fired
-15:12:24   52 moved: v
-15:12:24   52 moved: >
-15:12:24   52 fired
-15:12:24   53 moved: v
-15:12:24   53 moved: >
-15:12:24   53 fired
-15:12:24   54 moved: >
-15:12:24   54 fired
-15:12:25   55 moved: >
-15:12:25   55 fired
-15:12:25   56 moved: >
-15:12:25   56 fired
-15:12:25   57 moved: ^
-15:12:25   57 moved: ^
-15:12:25   57 moved: >
-15:12:25   57 fired
-15:12:25   58 moved: ^
-15:12:25   58 moved: >
-15:12:25   58 fired
-15:12:25   59 moved: ^
-15:12:25   59 moved: >
-15:12:25   59 fired
-15:12:25   60 moved: ^
-15:12:25   60 moved: >
-15:12:25   60 fired
-15:12:25   61 moved: ^
-15:12:25   61 moved: >
-15:12:25   61 fired
-15:12:25   62 moved: ^
-15:12:25   62 moved: >
-15:12:25   62 fired
-15:12:25   63 moved: ^
-15:12:25   63 moved: >
-15:12:25   63 fired
-15:12:25   64 moved: ^
-15:12:25   64 moved: >
-15:12:25   64 fired
-15:12:25   65 moved: >
-15:12:25   65 fired
-15:12:25   66 moved: >
-15:12:25   66 fired
-15:12:25   67 moved: >
-15:12:25   67 fired
-15:12:25   68 moved: v
-15:12:25   68 moved: v
-15:12:25   68 moved: >
-15:12:25   68 fired
-15:12:25   69 moved: v
-15:12:25   69 moved: >
-15:12:25   69 fired
-15:12:25   70 moved: v
-15:12:25   70 moved: >
-15:12:25   70 fired
-15:12:25   71 moved: <
-15:12:25   71 moved: v
-15:12:25   71 moved: <
-15:12:25   71 moved: >
-15:12:25   71 fired
-15:12:25   72 moved: v
-15:12:25   72 moved: <
-15:12:25   72 moved: >
-15:12:25   72 fired
-15:12:25   73 moved: <
-15:12:25   73 moved: >
-15:12:25   73 fired
-15:12:25   74 moved: >
-15:12:25   74 moved: <
-15:12:25   74 fired
-15:12:25   75 moved: <
-15:12:25   75 fired
-15:12:25   76 moved: ^
-15:12:25   76 moved: ^
-15:12:25   76 moved: <
-15:12:25   76 fired
-15:12:25   77 moved: ^
-15:12:25   77 moved: <
-15:12:25   77 fired
-15:12:25   78 moved: ^
-15:12:25   78 moved: <
-15:12:25   78 fired
-15:12:25   79 moved: ^
-15:12:25   79 moved: <
-15:12:25   79 fired
-15:12:25   80 moved: ^
-15:12:25   80 moved: <
-15:12:25   80 fired
-15:12:25   81 moved: ^
-15:12:25   81 moved: <
-15:12:25   81 fired
-15:12:25   82 moved: ^
-15:12:25   82 moved: <
-15:12:25   82 fired
-15:12:25   83 moved: ^
-15:12:25   83 moved: <
-15:12:25   83 fired
-15:12:25   84 moved: ^
-15:12:25   84 moved: <
-15:12:25   84 fired
-15:12:25   85 moved: ^
-15:12:25   85 moved: <
-15:12:25   85 fired
-15:12:26   86 moved: <
-15:12:26   86 fired
-15:12:26   87 moved: <
-15:12:26   87 fired
-15:12:26   88 moved: v
-15:12:26   88 moved: v
-15:12:26   88 moved: <
-15:12:26   88 fired
-15:12:26   89 moved: v
-15:12:26   89 moved: <
-15:12:26   89 fired
-15:12:26   90 moved: v
-15:12:26   90 moved: <
-15:12:26   90 fired
-15:12:26   91 moved: >
-15:12:26   91 moved: v
-15:12:26   91 moved: <
-15:12:26   91 moved: >
-15:12:26   91 fired
-15:12:26   92 moved: v
-15:12:26   92 moved: <
-15:12:26   92 moved: >
-15:12:26   92 fired
-15:12:26   93 moved: v
-15:12:26   93 moved: >
-15:12:26   93 fired
-15:12:26   94 moved: <
-15:12:26   94 moved: v
-15:12:26   94 moved: >
-15:12:26   94 fired
-15:12:26   95 moved: v
-15:12:26   95 moved: >
-15:12:26   95 fired
-15:12:26   96 moved: >
-15:12:26   96 fired
-15:12:26   97 moved: >
-15:12:26   97 fired
-15:12:26   98 moved: >
-15:12:26   98 fired
-15:12:26   99 moved: >
-15:12:26   99 fired
-15:12:26  100 moved: ^
-15:12:26  100 moved: ^
-15:12:26  100 moved: >
-15:12:26  100 fired
-15:12:26  101 moved: ^
-15:12:26  101 moved: >
-15:12:26  101 fired
-15:12:26  102 moved: ^
-15:12:26  102 moved: >
-15:12:26  102 fired
-15:12:26  103 moved: ^
-15:12:26  103 moved: >
-15:12:26  103 fired
-15:12:26  104 moved: <
-15:12:26  104 moved: ^
-15:12:26  104 moved: <
-15:12:26  104 moved: >
-15:12:26  104 fired
-15:12:26  105 moved: ^
-15:12:26  105 moved: <
-15:12:26  105 moved: >
-15:12:26  105 fired
-15:12:26  106 moved: ^
-15:12:26  106 moved: <
-15:12:26  106 moved: >
-15:12:26  106 fired
-15:12:26  107 moved: <
-15:12:26  107 moved: >
-15:12:26  107 fired
-15:12:26  108 moved: <
-15:12:26  108 moved: >
-15:12:26  108 fired
-15:12:26  109 moved: v
-15:12:26  109 moved: v
-15:12:26  109 moved: <
-15:12:26  109 moved: >
-15:12:26  109 fired
-15:12:26  110 moved: v
-15:12:26  110 moved: <
-15:12:26  110 moved: >
-15:12:26  110 fired
-15:12:26  111 moved: >
-15:12:26  111 moved: v
-15:12:26  111 moved: <
-15:12:26  111 fired
-15:12:26  112 moved: v
-15:12:26  112 moved: <
-15:12:26  112 fired
-15:12:26  113 moved: <
-15:12:26  113 fired
-15:12:26  114 moved: v
-15:12:26  114 moved: v
-15:12:26  114 moved: <
-15:12:26  114 fired
-15:12:26  115 moved: v
-15:12:26  115 moved: <
-15:12:26  115 fired
-15:12:27  116 moved: v
-15:12:27  116 moved: <
-15:12:27  116 fired
-15:12:27  117 moved: v
-15:12:27  117 moved: <
-15:12:27  117 fired
-15:12:27  118 moved: v
-15:12:27  118 moved: <
-15:12:27  118 fired
-15:12:27  119 moved: v
-15:12:27  119 moved: <
-15:12:27  119 fired
-15:12:27  120 moved: v
-15:12:27  120 moved: <
-15:12:27  120 fired
-15:12:27  121 moved: v
-15:12:27  121 moved: <
-15:12:27  121 fired
-15:12:27  122 moved: v
-15:12:27  122 moved: <
-15:12:27  122 fired
-15:12:27  123 moved: <
-15:12:27  123 fired
-15:12:27  124 moved: <
-15:12:27  124 fired
-15:12:27  125 moved: ^
-15:12:27  125 moved: ^
-15:12:27  125 moved: <
-15:12:27  125 fired
-15:12:27  126 moved: ^
-15:12:27  126 moved: <
-15:12:27  126 fired
-15:12:27  127 moved: ^
-15:12:27  127 moved: <
-15:12:27  127 fired
-15:12:27  128 moved: ^
-15:12:27  128 moved: <
-15:12:27  128 fired
-15:12:27  129 moved: ^
-15:12:27  129 moved: <
-15:12:27  129 fired
-15:12:27  130 moved: ^
-15:12:27  130 moved: <
-15:12:27  130 fired
-15:12:27  131 moved: ^
-15:12:27  131 moved: <
-15:12:27  131 fired
-15:12:27  132 moved: ^
-15:12:27  132 moved: <
-15:12:27  132 fired
-15:12:27  133 moved: >
-15:12:27  133 moved: ^
-15:12:27  133 moved: <
-15:12:27  133 moved: >
-15:12:27  133 fired
-15:12:27  134 moved: <
-15:12:27  134 moved: ^
-15:12:27  134 moved: >
-15:12:27  134 fired
-15:12:27  135 moved: >
-15:12:27  135 fired
-15:12:27  136 moved: >
-15:12:27  136 fired
-15:12:27  137 moved: >
-15:12:27  137 fired
-15:12:27  138 moved: v
-15:12:27  138 moved: v
-15:12:27  138 moved: >
-15:12:27  138 fired
-15:12:27  139 moved: v
-15:12:27  139 moved: >
-15:12:27  139 fired
-15:12:27  140 moved: v
-15:12:27  140 moved: >
-15:12:27  140 fired
-15:12:27  141 moved: v
-15:12:27  141 moved: >
-15:12:27  141 fired
-15:12:27  142 moved: v
-15:12:27  142 moved: >
-15:12:27  142 fired
-15:12:27  143 moved: v
-15:12:27  143 moved: >
-15:12:27  143 fired
-15:12:27  144 moved: v
-15:12:27  144 moved: >
-15:12:27  144 fired
-15:12:27  145 moved: v
-15:12:27  145 moved: >
-15:12:27  145 fired
-15:12:28  146 moved: v
-15:12:28  146 moved: >
-15:12:28  146 fired
-15:12:28  147 moved: v
-15:12:28  147 moved: >
-15:12:28  147 fired
-15:12:28  148 moved: v
-15:12:28  148 moved: >
-15:12:28  148 fired
-15:12:28  149 moved: v
-15:12:28  149 moved: >
-15:12:28  149 fired
-15:12:28  150 moved: >
-15:12:28  150 fired
-15:12:28  151 moved: >
-15:12:28  151 fired
-15:12:28  152 moved: ^
-15:12:28  152 moved: ^
-15:12:28  152 moved: >
-15:12:28  152 fired
-15:12:28  153 moved: ^
-15:12:28  153 moved: >
-15:12:28  153 fired
-15:12:28  154 moved: ^
-15:12:28  154 moved: >
-15:12:28  154 fired
-15:12:28  155 moved: ^
-15:12:28  155 moved: >
-15:12:28  155 fired
-15:12:28  156 moved: ^
-15:12:28  156 moved: >
-15:12:28  156 fired
-15:12:28  157 moved: ^
-15:12:28  157 moved: >
-15:12:28  157 fired
-15:12:28  158 moved: ^
-15:12:28  158 moved: >
-15:12:28  158 fired
-15:12:28  159 moved: ^
-15:12:28  159 moved: >
-15:12:28  159 fired
-15:12:28  160 moved: ^
-15:12:28  160 moved: >
-15:12:28  160 fired
-15:12:28  161 moved: ^
-15:12:28  161 moved: >
-15:12:28  161 fired
-15:12:28  162 moved: ^
-15:12:28  162 moved: >
-15:12:28  162 fired
-15:12:28  163 moved: <
-15:12:28  163 moved: ^
-15:12:28  163 moved: <
-15:12:28  163 moved: >
-15:12:28  163 fired
-15:12:28  164 moved: >
-15:12:28  164 moved: ^
-15:12:28  164 moved: <
-15:12:28  164 fired
-15:12:28  165 moved: ^
-15:12:28  165 moved: <
-15:12:28  165 fired
-15:12:28  166 moved: <
-15:12:28  166 fired
-15:12:28  167 moved: <
-15:12:28  167 fired
-15:12:28  168 moved: <
-15:12:28  168 fired
-15:12:28  169 moved: <
-15:12:28  169 fired
-15:12:28  170 moved: <
-15:12:28  170 fired
-15:12:28  171 moved: <
-15:12:28  171 fired
-15:12:28  172 moved: v
-15:12:28  172 moved: v
-15:12:28  172 moved: <
-15:12:28  172 fired
-15:12:28  173 moved: v
-15:12:28  173 moved: <
-15:12:28  173 fired
-15:12:28  174 moved: v
-15:12:28  174 moved: <
-15:12:28  174 fired
-15:12:28  175 moved: v
-15:12:28  175 moved: <
-15:12:28  175 fired
-15:12:28  176 moved: v
-15:12:28  176 moved: <
-15:12:28  176 fired
-15:12:29  177 moved: v
-15:12:29  177 moved: <
-15:12:29  177 fired
-15:12:29  178 moved: v
-15:12:29  178 moved: <
-15:12:29  178 fired
-15:12:29  179 moved: v
-15:12:29  179 moved: <
-15:12:29  179 fired
-15:12:29  180 moved: v
-15:12:29  180 moved: <
-15:12:29  180 fired
-15:12:29  181 moved: v
-15:12:29  181 moved: <
-15:12:29  181 fired
-15:12:29  182 moved: v
-15:12:29  182 moved: <
-15:12:29  182 fired
-15:12:29  183 moved: v
-15:12:29  183 moved: <
-15:12:29  183 fired
-15:12:29  184 moved: v
-15:12:29  184 moved: <
-15:12:29  184 fired
-15:12:29  185 moved: v
-15:12:29  185 moved: <
-15:12:29  185 fired
-15:12:29  186 moved: ^
-15:12:29  186 moved: ^
-15:12:29  186 moved: <
-15:12:29  186 fired
-15:12:29  187 moved: ^
-15:12:29  187 moved: <
-15:12:29  187 fired
-15:12:29  188 moved: ^
-15:12:29  188 moved: <
-15:12:29  188 fired
-15:12:29  189 moved: ^
-15:12:29  189 moved: <
-15:12:29  189 fired
-15:12:29  190 moved: <
-15:12:29  190 moved: ^
-15:12:29  190 fired
-15:12:29  191 moved: ^
-15:12:29  191 fired
-15:12:29  192 moved: ^
-15:12:29  192 fired
-15:12:29  193 moved: >
-15:12:29  193 moved: ^
-15:12:29  193 moved: >
-15:12:29  193 fired
-15:12:29  194 moved: ^
-15:12:29  194 moved: >
-15:12:29  194 fired
-15:12:29  195 moved: ^
-15:12:29  195 moved: >
-15:12:29  195 fired
-15:12:29  196 moved: ^
-15:12:29  196 moved: >
-15:12:29  196 fired
-15:12:29  197 moved: ^
-15:12:29  197 moved: >
-15:12:29  197 fired
-15:12:29  198 moved: ^
-15:12:29  198 moved: >
-15:12:29  198 fired
-15:12:29  199 moved: ^
-15:12:29  199 moved: >
-15:12:29  199 fired
-15:12:29  200 moved: ^
-15:12:29  200 moved: >
-15:12:29  200 fired
-15:12:29  201 moved: >
-15:12:29  201 fired
-15:12:29  202 moved: >
-15:12:29  202 fired
-15:12:29  203 moved: >
-15:12:29  203 fired
-15:12:29  204 moved: v
-15:12:29  204 moved: v
-15:12:29  204 moved: >
-15:12:29  204 fired
-15:12:29  205 moved: v
-15:12:29  205 moved: >
-15:12:29  205 fired
-15:12:29  206 moved: v
-15:12:29  206 moved: >
-15:12:29  206 fired
-15:12:30  207 moved: v
-15:12:30  207 moved: >
-15:12:30  207 fired
-15:12:30  208 moved: v
-15:12:30  208 moved: >
-15:12:30  208 fired
-15:12:30  209 moved: v
-15:12:30  209 moved: >
-15:12:30  209 fired
-15:12:30  210 moved: v
-15:12:30  210 moved: >
-15:12:30  210 fired
-15:12:30  211 moved: v
-15:12:30  211 moved: >
-15:12:30  211 fired
-15:12:30  212 moved: v
-15:12:30  212 moved: >
-15:12:30  212 fired
-15:12:30  213 moved: v
-15:12:30  213 moved: >
-15:12:30  213 fired
-15:12:30  214 moved: v
-15:12:30  214 moved: >
-15:12:30  214 fired
-15:12:30  215 moved: v
-15:12:30  215 moved: >
-15:12:30  215 fired
-15:12:30  216 moved: v
-15:12:30  216 moved: >
-15:12:30  216 fired
-15:12:30  217 moved: v
-15:12:30  217 moved: >
-15:12:30  217 fired
-15:12:30  218 moved: >
-15:12:30  218 fired
-15:12:30  219 moved: >
-15:12:30  219 fired
-15:12:30  220 moved: ^
-15:12:30  220 moved: ^
-15:12:30  220 moved: >
-15:12:30  220 fired
-15:12:30  221 moved: ^
-15:12:30  221 moved: >
-15:12:30  221 fired
-15:12:30  222 moved: ^
-15:12:30  222 moved: >
-15:12:30  222 fired
-15:12:30  223 moved: ^
-15:12:30  223 moved: >
-15:12:30  223 fired
-15:12:30  224 moved: ^
-15:12:30  224 moved: >
-15:12:30  224 fired
-15:12:30  225 moved: ^
-15:12:30  225 moved: >
-15:12:30  225 fired
-15:12:30  226 moved: <
-15:12:30  226 moved: >
-15:12:30  226 moved: ^
-15:12:30  226 moved: <
-15:12:30  226 fired
-15:12:30  227 moved: ^
-15:12:30  227 moved: <
-15:12:30  227 fired
-15:12:30  228 moved: ^
-15:12:30  228 moved: <
-15:12:30  228 fired
-15:12:30  229 moved: ^
-15:12:30  229 moved: <
-15:12:30  229 fired
-15:12:30  230 moved: ^
-15:12:30  230 moved: <
-15:12:30  230 fired
-15:12:30  231 moved: ^
-15:12:30  231 moved: <
-15:12:30  231 fired
-15:12:30  232 moved: ^
-15:12:30  232 moved: <
-15:12:30  232 fired
-15:12:30  233 moved: ^
-15:12:30  233 moved: <
-15:12:30  233 fired
-15:12:30  234 moved: ^
-15:12:30  234 moved: <
-15:12:30  234 fired
-15:12:30  235 moved: ^
-15:12:30  235 moved: <
-15:12:30  235 fired
-15:12:30  236 moved: ^
-15:12:30  236 moved: <
-15:12:30  236 fired
-15:12:31  237 moved: ^
-15:12:31  237 moved: <
-15:12:31  237 fired
-15:12:31  238 moved: <
-15:12:31  238 fired
-15:12:31  239 moved: <
-15:12:31  239 fired
-15:12:31  240 moved: <
-15:12:31  240 fired
-15:12:31  241 moved: <
-15:12:31  241 fired
-15:12:31  242 moved: <
-15:12:31  242 fired
-15:12:31  243 moved: <
-15:12:31  243 fired
-15:12:31  244 moved: <
-15:12:31  244 fired
-15:12:31  245 fired
-15:12:31  257 fired
-15:12:31  257 fired
-15:12:31  258 fired
-15:12:31  259 moved: v
-15:12:31  259 moved: <
-15:12:31  259 moved: v
-15:12:31  259 moved: <
-15:12:31  259 fired
-15:12:31  260 moved: v
-15:12:31  260 moved: <
-15:12:31  260 fired
-15:12:31  261 moved: v
-15:12:31  261 moved: <
-15:12:31  261 fired
-15:12:31  262 moved: v
-15:12:31  262 moved: <
-15:12:31  262 fired
-15:12:31  263 moved: v
-15:12:31  263 moved: <
-15:12:31  263 fired
-15:12:31  264 moved: v
-15:12:31  264 moved: <
-15:12:31  264 fired
-15:12:31  265 moved: v
-15:12:31  265 moved: <
-15:12:31  265 fired
-15:12:31  266 moved: v
-15:12:31  266 moved: <
-15:12:31  266 fired
-15:12:31  267 moved: v
-15:12:31  267 moved: <
-15:12:31  267 fired
-15:12:32  268 moved: v
-15:12:32  268 moved: <
-15:12:32  268 fired
-15:12:32  269 moved: v
-15:12:32  269 moved: <
-15:12:32  269 fired
-15:12:32  270 moved: v
-15:12:32  270 moved: <
-15:12:32  270 fired
-15:12:32  271 moved: v
-15:12:32  271 moved: <
-15:12:32  271 fired
-15:12:32  272 moved: v
-15:12:32  272 moved: <
-15:12:32  272 fired
-15:12:32  273 moved: v
-15:12:32  273 moved: <
-15:12:32  273 fired
-15:12:32  274 moved: >
-15:12:32  274 moved: <
-15:12:32  274 moved: >
-15:12:32  274 fired
-15:12:32  275 moved: >
-15:12:32  275 fired
-15:12:32  276 moved: >
-15:12:32  276 fired
-15:12:32  277 moved: >
-15:12:32  277 fired
-15:12:32  278 moved: >
-15:12:32  278 fired
-15:12:32  279 moved: >
-15:12:32  279 fired
-15:12:32  280 moved: >
-15:12:32  280 fired
-15:12:32  281 moved: >
-15:12:32  281 fired
-15:12:32  282 moved: >
-15:12:32  282 fired
-15:12:32  283 moved: >
-15:12:32  283 fired
-15:12:32  284 moved: ^
-15:12:32  284 moved: ^
-15:12:32  284 moved: >
-15:12:32  284 fired
-15:12:32  285 moved: ^
-15:12:32  285 moved: >
-15:12:32  285 fired
-15:12:32  286 moved: ^
-15:12:32  286 moved: >
-15:12:32  286 fired
-15:12:32  287 moved: ^
-15:12:32  287 moved: >
-15:12:32  287 fired
-15:12:32  288 moved: ^
-15:12:32  288 moved: >
-15:12:32  288 fired
-15:12:32  289 moved: ^
-15:12:32  289 moved: >
-15:12:32  289 fired
-15:12:32  290 moved: ^
-15:12:32  290 moved: >
-15:12:32  290 fired
-15:12:32  291 moved: ^
-15:12:32  291 moved: >
-15:12:32  291 fired
-15:12:32  292 moved: ^
-15:12:32  292 moved: >
-15:12:32  292 fired
-15:12:32  293 moved: ^
-15:12:32  293 moved: >
-15:12:32  293 fired
-15:12:32  294 moved: ^
-15:12:32  294 moved: >
-15:12:32  294 fired
-15:12:32  295 moved: >
-15:12:32  295 fired
-15:12:32  296 moved: >
-15:12:32  296 fired
-15:12:32  297 moved: >
-15:12:32  297 fired
-15:12:33  298 moved: v
-15:12:33  298 moved: v
-15:12:33  298 moved: >
-15:12:33  298 fired
-15:12:33  299 moved: v
-15:12:33  299 moved: >
-15:12:33  299 fired
-15:12:33  300 moved: v
-15:12:33  300 moved: >
-15:12:33  300 fired
-15:12:33  301 moved: v
-15:12:33  301 moved: >
-15:12:33  301 fired
-15:12:33  302 moved: v
-15:12:33  302 moved: >
-15:12:33  302 fired
-15:12:33  303 moved: <
-15:12:33  303 moved: v
-15:12:33  303 moved: <
-15:12:33  303 moved: >
-15:12:33  303 fired
-15:12:33  304 moved: v
-15:12:33  304 moved: <
-15:12:33  304 moved: >
-15:12:33  304 fired
-15:12:33  305 moved: v
-15:12:33  305 moved: <
-15:12:33  305 moved: >
-15:12:33  305 fired
-15:12:33  306 moved: v
-15:12:33  306 moved: >
-15:12:33  306 moved: <
-15:12:33  306 fired
-15:12:33  307 moved: <
-15:12:33  307 fired
-15:12:33  308 moved: <
-15:12:33  308 fired
-15:12:33  309 moved: <
-15:12:33  309 fired
-15:12:33  310 moved: ^
-15:12:33  310 moved: ^
-15:12:33  310 moved: <
-15:12:33  310 fired
-15:12:33  311 moved: ^
-15:12:33  311 moved: <
-15:12:33  311 fired
-15:12:33  312 moved: ^
-15:12:33  312 moved: <
-15:12:33  312 fired
-15:12:33  313 moved: ^
-15:12:33  313 moved: <
-15:12:33  313 fired
-15:12:33  314 moved: ^
-15:12:33  314 moved: <
-15:12:33  314 fired
-15:12:33  315 moved: ^
-15:12:33  315 moved: <
-15:12:33  315 fired
-15:12:33  316 moved: ^
-15:12:33  316 moved: <
-15:12:33  316 fired
-15:12:33  317 moved: >
-15:12:33  317 moved: ^
-15:12:33  317 moved: <
-15:12:33  317 moved: >
-15:12:33  317 fired
-15:12:33  318 moved: ^
-15:12:33  318 moved: <
-15:12:33  318 moved: >
-15:12:33  318 fired
-15:12:33  319 moved: ^
-15:12:33  319 moved: <
-15:12:33  319 moved: >
-15:12:33  319 fired
-15:12:33  320 moved: ^
-15:12:33  320 moved: <
-15:12:33  320 moved: >
-15:12:33  320 fired
-15:12:33  321 moved: ^
-15:12:33  321 moved: <
-15:12:33  321 moved: >
-15:12:33  321 fired
-15:12:33  322 moved: ^
-15:12:33  322 moved: <
-15:12:33  322 moved: >
-15:12:33  322 fired
-15:12:33  323 moved: ^
-15:12:33  323 moved: <
-15:12:33  323 moved: >
-15:12:33  323 fired
-15:12:33  324 moved: ^
-15:12:33  324 moved: <
-15:12:33  324 moved: >
-15:12:33  324 fired
-15:12:33  325 moved: ^
-15:12:33  325 moved: <
-15:12:33  325 moved: >
-15:12:33  325 fired
-15:12:33  326 moved: ^
-15:12:33  326 moved: <
-15:12:33  326 moved: >
-15:12:33  326 fired
-15:12:33  327 moved: ^
-15:12:33  327 moved: <
-15:12:33  327 moved: >
-15:12:33  327 fired
-15:12:34  328 moved: ^
-15:12:34  328 moved: <
-15:12:34  328 moved: >
-15:12:34  328 fired
-15:12:34  329 moved: ^
-15:12:34  329 moved: <
-15:12:34  329 moved: >
-15:12:34  329 fired
-15:12:34  330 moved: <
-15:12:34  330 moved: ^
-15:12:34  330 moved: >
-15:12:34  330 fired
-15:12:34  331 moved: ^
-15:12:34  331 moved: >
-15:12:34  331 fired
-15:12:34  332 moved: ^
-15:12:34  332 moved: >
-15:12:34  332 fired
-15:12:34  333 moved: ^
-15:12:34  333 moved: >
-15:12:34  333 fired
-15:12:34  334 moved: ^
-15:12:34  334 moved: >
-15:12:34  334 fired
-15:12:34  335 moved: ^
-15:12:34  335 moved: >
-15:12:34  335 fired
-15:12:34  336 moved: ^
-15:12:34  336 moved: >
-15:12:34  336 fired
-15:12:34  337 moved: ^
-15:12:34  337 moved: >
-15:12:34  337 fired
-15:12:34  338 moved: ^
-15:12:34  338 moved: >
-15:12:34  338 fired
-15:12:34  339 moved: ^
-15:12:34  339 moved: >
-15:12:34  339 fired
-15:12:34  340 moved: ^
-15:12:34  340 moved: >
-15:12:34  340 fired
-15:12:34  341 moved: ^
-15:12:34  341 moved: >
-15:12:34  341 fired
-15:12:34  342 moved: ^
-15:12:34  342 moved: >
-15:12:34  342 fired
-15:12:34  343 moved: ^
-15:12:34  343 moved: >
-15:12:34  343 fired
-15:12:34  344 moved: ^
-15:12:34  344 moved: >
-15:12:34  344 fired
-15:12:34  345 moved: ^
-15:12:34  345 moved: >
-15:12:34  345 fired
-15:12:34  346 moved: ^
-15:12:34  346 moved: >
-15:12:34  346 fired
-15:12:34  347 moved: ^
-15:12:34  347 moved: >
-15:12:34  347 fired
-15:12:34  348 moved: ^
-15:12:34  348 moved: >
-15:12:34  348 fired
-15:12:34  349 moved: ^
-15:12:34  349 moved: >
-15:12:34  349 fired
-15:12:34  350 moved: ^
-15:12:34  350 moved: >
-15:12:34  350 fired
-15:12:34  351 moved: ^
-15:12:34  351 moved: >
-15:12:34  351 fired
-15:12:34  352 moved: ^
-15:12:34  352 moved: >
-15:12:34  352 fired
-15:12:34  353 moved: >
-15:12:34  353 fired
-15:12:34  354 moved: >
-15:12:34  354 fired
-15:12:34  354 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
-15:12:34  355 moved: >
-15:12:34  355 fired
-15:12:34  355 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:34  356 moved: >
-15:12:34  356 fired
-15:12:34  356 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
-15:12:34  357 fired
-15:12:35  358 fired
-15:12:35  359 fired
-15:12:35  360 fired
-15:12:35  361 fired
-15:12:35  364 fired
-15:12:35  364 fired
-15:12:35  365 moved: v
-15:12:35  365 moved: v
-15:12:35  365 fired
-15:12:35  366 moved: <
-15:12:35  366 moved: v
-15:12:35  366 moved: <
-15:12:35  366 fired
-15:12:35  366 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-15:12:35  367 moved: v
-15:12:35  367 moved: <
-15:12:35  367 fired
-15:12:35  368 moved: v
-15:12:35  368 moved: <
-15:12:35  368 fired
-15:12:35  369 moved: v
-15:12:35  369 moved: <
-15:12:35  369 fired
-15:12:35  370 moved: v
-15:12:35  370 moved: <
-15:12:35  370 fired
-15:12:35  371 moved: v
-15:12:35  371 moved: <
-15:12:35  371 fired
-15:12:35  372 moved: v
-15:12:35  372 moved: <
-15:12:35  372 fired
-15:12:35  373 moved: v
-15:12:35  373 moved: <
-15:12:35  373 fired
-15:12:35  374 moved: v
-15:12:35  374 moved: <
-15:12:35  374 fired
-15:12:35  375 moved: v
-15:12:35  375 moved: <
-15:12:35  375 fired
-15:12:35  376 moved: v
-15:12:35  376 moved: <
-15:12:35  376 fired
-15:12:35  377 moved: v
-15:12:35  377 moved: <
-15:12:35  377 fired
-15:12:35  378 moved: v
-15:12:35  378 moved: <
-15:12:35  378 fired
-15:12:35  379 moved: v
-15:12:35  379 moved: <
-15:12:35  379 fired
-15:12:35  380 moved: v
-15:12:35  380 moved: <
-15:12:35  380 fired
-15:12:35  381 moved: v
-15:12:35  381 moved: <
-15:12:35  381 fired
-15:12:35  382 moved: v
-15:12:35  382 moved: <
-15:12:35  382 fired
-15:12:35  382 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
-15:12:35  383 moved: v
-15:12:35  383 moved: <
-15:12:35  383 fired
-15:12:35  383 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:35  384 moved: v
-15:12:35  384 moved: <
-15:12:35  384 fired
-15:12:35  384 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:35  385 moved: v
-15:12:35  385 moved: <
-15:12:35  385 fired
-15:12:35  385 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
-15:12:35  386 moved: v
-15:12:35  386 moved: <
-15:12:35  386 fired
-15:12:35  386 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:35  387 moved: v
-15:12:35  387 moved: <
-15:12:35  387 fired
-15:12:36  387 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-15:12:36  388 moved: v
-15:12:36  388 moved: <
-15:12:36  388 fired
-15:12:36  388 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:36  389 moved: v
-15:12:36  389 moved: <
-15:12:36  389 fired
-15:12:36  389 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-15:12:36  390 moved: v
-15:12:36  390 moved: <
-15:12:36  390 fired
-15:12:36  390 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:36  391 moved: <
-15:12:36  391 fired
-15:12:36  391 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:36  392 moved: <
-15:12:36  392 fired
-15:12:36  392 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:36  393 moved: <
-15:12:36  393 fired
-15:12:36  393 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:36  394 moved: ^
-15:12:36  394 moved: ^
-15:12:36  394 moved: <
-15:12:36  394 fired
-15:12:36  394 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:36  395 moved: ^
-15:12:36  395 moved: <
-15:12:36  395 fired
-15:12:36  395 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-15:12:36  396 moved: ^
-15:12:36  396 moved: <
-15:12:36  396 fired
-15:12:36  396 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:36  397 moved: ^
-15:12:36  397 moved: <
-15:12:36  397 fired
-15:12:36  397 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
-15:12:36  398 moved: ^
-15:12:36  398 moved: <
-15:12:36  398 fired
-15:12:36  398 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:36  399 moved: ^
-15:12:36  399 moved: <
-15:12:36  399 fired
-15:12:36  399 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:36  400 moved: ^
-15:12:36  400 moved: <
-15:12:36  400 fired
-15:12:36  400 GameManager::run(): Can't keep up! frame_time 33 ms, split 36 ms
-15:12:36  401 moved: ^
-15:12:36  401 moved: <
-15:12:36  401 fired
-15:12:36  401 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:36  402 moved: ^
-15:12:36  402 moved: <
-15:12:36  402 fired
-15:12:36  402 GameManager::run(): Can't keep up! frame_time 33 ms, split 35 ms
-15:12:36  403 moved: ^
-15:12:36  403 moved: <
-15:12:36  403 fired
-15:12:36  403 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
-15:12:36  404 moved: ^
-15:12:36  404 moved: <
-15:12:36  404 fired
-15:12:36  404 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
-15:12:36  405 moved: ^
-15:12:36  405 moved: <
-15:12:36  405 fired
-15:12:36  405 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
-15:12:36  406 moved: <
-15:12:36  406 moved: ^
-15:12:36  406 fired
-15:12:36  406 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
-15:12:36  407 fired
-15:12:36  407 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
-15:12:36  408 moved: >
-15:12:36  408 moved: >
-15:12:36  408 fired
-15:12:36  408 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:36  409 moved: >
-15:12:36  409 fired
-15:12:36  409 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
-15:12:36  410 moved: >
-15:12:36  410 fired
-15:12:36  410 GameManager::run(): Can't keep up! frame_time 33 ms, split 37 ms
-15:12:36  411 moved: >
-15:12:36  411 fired
-15:12:36  411 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:36  412 moved: >
-15:12:36  412 fired
-15:12:36  412 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:36  413 moved: >
-15:12:36  413 fired
-15:12:37  413 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:37  414 moved: >
-15:12:37  414 fired
-15:12:37  414 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:37  415 moved: v
-15:12:37  415 moved: v
-15:12:37  415 moved: >
-15:12:37  415 fired
-15:12:37  415 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
-15:12:37  416 moved: v
-15:12:37  416 moved: >
-15:12:37  416 fired
-15:12:37  416 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:37  417 moved: v
-15:12:37  417 moved: >
-15:12:37  417 fired
-15:12:37  417 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:37  418 moved: v
-15:12:37  418 moved: >
-15:12:37  418 fired
-15:12:37  418 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:37  419 moved: v
-15:12:37  419 moved: >
-15:12:37  419 fired
-15:12:37  419 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:37  420 moved: v
-15:12:37  420 moved: >
-15:12:37  420 fired
-15:12:37  420 GameManager::run(): Can't keep up! frame_time 33 ms, split 38 ms
-15:12:37  421 moved: v
-15:12:37  421 moved: >
-15:12:37  421 fired
-15:12:37  421 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
-15:12:37  422 moved: v
-15:12:37  422 moved: >
-15:12:37  422 fired
-15:12:37  422 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:37  423 moved: v
-15:12:37  423 moved: >
-15:12:37  423 fired
-15:12:37  423 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:37  424 moved: v
-15:12:37  424 moved: >
-15:12:37  424 fired
-15:12:37  424 GameManager::run(): Can't keep up! frame_time 33 ms, split 39 ms
-15:12:37  425 moved: v
-15:12:37  425 moved: >
-15:12:37  425 fired
-15:12:37  425 GameManager::run(): Can't keep up! frame_time 33 ms, split 45 ms
-15:12:37  426 moved: >
-15:12:37  426 fired
-15:12:37  426 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
-15:12:37  427 moved: >
-15:12:37  427 fired
-15:12:37  427 GameManager::run(): Can't keep up! frame_time 33 ms, split 40 ms
-15:12:37  428 moved: >
-15:12:37  428 fired
-15:12:37  428 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:37  429 moved: ^
-15:12:37  429 moved: ^
-15:12:37  429 moved: >
-15:12:37  429 fired
-15:12:37  429 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
-15:12:37  430 moved: ^
-15:12:37  430 moved: >
-15:12:37  430 fired
-15:12:37  430 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:37  431 moved: ^
-15:12:37  431 moved: >
-15:12:37  431 fired
-15:12:37  431 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:37  432 moved: ^
-15:12:37  432 moved: >
-15:12:37  432 fired
-15:12:37  432 GameManager::run(): Can't keep up! frame_time 33 ms, split 41 ms
-15:12:37  433 moved: ^
-15:12:37  433 moved: >
-15:12:37  433 fired
-15:12:37  433 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:37  434 moved: ^
-15:12:37  434 moved: >
-15:12:37  434 fired
-15:12:37  434 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-15:12:37  435 moved: ^
-15:12:37  435 moved: >
-15:12:37  435 fired
-15:12:37  435 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:37  436 moved: ^
-15:12:37  436 moved: >
-15:12:37  436 fired
-15:12:37  436 GameManager::run(): Can't keep up! frame_time 33 ms, split 42 ms
-15:12:37  437 moved: ^
-15:12:37  437 moved: >
-15:12:37  437 fired
-15:12:38  437 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-15:12:38  438 moved: <
-15:12:38  438 moved: ^
-15:12:38  438 moved: <
-15:12:38  438 moved: >
-15:12:38  438 fired
-15:12:38  438 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
-15:12:38  439 moved: ^
-15:12:38  439 moved: >
-15:12:38  439 moved: <
-15:12:38  439 fired
-15:12:38  439 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
-15:12:38  440 moved: <
-15:12:38  440 fired
-15:12:38  440 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:38  441 moved: <
-15:12:38  441 fired
-15:12:38  441 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:38  442 moved: v
-15:12:38  442 moved: v
-15:12:38  442 moved: <
-15:12:38  442 fired
-15:12:38  442 GameManager::run(): Can't keep up! frame_time 33 ms, split 43 ms
-15:12:38  443 moved: v
-15:12:38  443 moved: <
-15:12:38  443 fired
-15:12:38  443 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-15:12:38  444 moved: v
-15:12:38  444 moved: <
-15:12:38  444 fired
-15:12:38  444 GameManager::run(): Can't keep up! frame_time 33 ms, split 45 ms
-15:12:38  445 moved: v
-15:12:38  445 moved: <
-15:12:38  445 fired
-15:12:38  445 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-15:12:38  446 moved: v
-15:12:38  446 moved: <
-15:12:38  446 fired
-15:12:38  446 GameManager::run(): Can't keep up! frame_time 33 ms, split 45 ms
-15:12:38  447 moved: v
-15:12:38  447 moved: <
-15:12:38  447 fired
-15:12:38  447 GameManager::run(): Can't keep up! frame_time 33 ms, split 44 ms
-15:12:38  448 moved: v
-15:12:38  448 moved: <
-15:12:38  448 fired
-15:12:38  448 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:38  449 moved: v
-15:12:38  449 moved: <
-15:12:38  449 fired
-15:12:38  449 GameManager::run(): Can't keep up! frame_time 33 ms, split 45 ms
-15:12:38  450 moved: v
-15:12:38  450 moved: <
-15:12:38  450 fired
-15:12:38  450 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:38  451 moved: <
-15:12:38  451 fired
-15:12:38  451 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:38  452 moved: ^
-15:12:38  452 moved: ^
-15:12:38  452 moved: <
-15:12:38  452 fired
-15:12:38  452 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:38  453 moved: ^
-15:12:38  453 moved: <
-15:12:38  453 fired
-15:12:38  453 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:38  454 moved: ^
-15:12:38  454 moved: <
-15:12:38  454 fired
-15:12:38  454 GameManager::run(): Can't keep up! frame_time 33 ms, split 45 ms
-15:12:38  455 moved: ^
-15:12:38  455 moved: <
-15:12:38  455 fired
-15:12:38  455 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:38  456 moved: ^
-15:12:38  456 moved: <
-15:12:38  456 fired
-15:12:38  456 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:38  457 moved: ^
-15:12:38  457 moved: <
-15:12:38  457 fired
-15:12:38  457 GameManager::run(): Can't keep up! frame_time 33 ms, split 46 ms
-15:12:38  458 moved: ^
-15:12:38  458 moved: <
-15:12:38  458 fired
-15:12:38  458 GameManager::run(): Can't keep up! frame_time 33 ms, split 48 ms
-15:12:38  459 moved: ^
-15:12:38  459 moved: <
-15:12:38  459 fired
-15:12:39  459 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-15:12:39  460 moved: ^
-15:12:39  460 moved: <
-15:12:39  460 fired
-15:12:39  460 GameManager::run(): Can't keep up! frame_time 33 ms, split 47 ms
-15:12:39  461 moved: ^
-15:12:39  461 moved: <
-15:12:39  461 fired
-15:12:39  461 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:39  462 moved: ^
-15:12:39  462 moved: <
-15:12:39  462 fired
-15:12:39  462 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:39  463 moved: ^
-15:12:39  463 moved: <
-15:12:39  463 fired
-15:12:39  463 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-15:12:39  464 moved: >
-15:12:39  464 moved: >
-15:12:39  464 fired
-15:12:39  464 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:39  465 moved: >
-15:12:39  465 fired
-15:12:39  465 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:39  466 moved: >
-15:12:39  466 fired
-15:12:39  466 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-15:12:39  467 moved: >
-15:12:39  467 fired
-15:12:39  467 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:39  468 moved: v
-15:12:39  468 moved: v
-15:12:39  468 moved: >
-15:12:39  468 fired
-15:12:39  468 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:39  469 moved: v
-15:12:39  469 moved: >
-15:12:39  469 fired
-15:12:39  469 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
-15:12:39  470 moved: v
-15:12:39  470 moved: >
-15:12:39  470 fired
-15:12:39  470 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:39  471 moved: v
-15:12:39  471 moved: >
-15:12:39  471 fired
-15:12:39  471 GameManager::run(): Can't keep up! frame_time 33 ms, split 48 ms
-15:12:39  472 moved: v
-15:12:39  472 moved: >
-15:12:39  472 fired
-15:12:39  472 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:39  473 moved: v
-15:12:39  473 moved: >
-15:12:39  473 fired
-15:12:39  473 GameManager::run(): Can't keep up! frame_time 33 ms, split 49 ms
-15:12:39  474 moved: v
-15:12:39  474 moved: >
-15:12:39  474 fired
-15:12:39  474 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:39  475 moved: v
-15:12:39  475 moved: >
-15:12:39  475 fired
-15:12:39  475 GameManager::run(): Can't keep up! frame_time 33 ms, split 51 ms
-15:12:39  476 moved: v
-15:12:39  476 moved: >
-15:12:39  476 fired
-15:12:39  476 GameManager::run(): Can't keep up! frame_time 33 ms, split 50 ms
-15:12:39  477 moved: v
-15:12:39  477 moved: >
-15:12:39  477 fired
-15:12:39  477 GameManager::run(): Can't keep up! frame_time 33 ms, split 52 ms
-15:12:39  478 moved: v
-15:12:39  478 moved: >
-15:12:39  478 fired
-15:12:40  478 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:40  479 moved: v
-15:12:40  479 moved: >
-15:12:40  479 fired
-15:12:40  479 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:40  480 moved: v
-15:12:40  480 moved: >
-15:12:40  480 fired
-15:12:40  480 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:40  481 moved: v
-15:12:40  481 moved: >
-15:12:40  481 fired
-15:12:40  481 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-15:12:40  482 moved: v
-15:12:40  482 moved: >
-15:12:40  482 fired
-15:12:40  482 GameManager::run(): Can't keep up! frame_time 33 ms, split 55 ms
-15:12:40  483 moved: >
-15:12:40  483 fired
-15:12:40  483 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-15:12:40  484 moved: >
-15:12:40  484 moved: ^
-15:12:40  484 moved: ^
-15:12:40  484 fired
-15:12:40  484 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:40  485 moved: <
-15:12:40  485 moved: ^
-15:12:40  485 moved: <
-15:12:40  485 fired
-15:12:40  485 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-15:12:40  486 moved: ^
-15:12:40  486 moved: <
-15:12:40  486 fired
-15:12:40  486 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-15:12:40  487 moved: ^
-15:12:40  487 moved: <
-15:12:40  487 fired
-15:12:40  487 GameManager::run(): Can't keep up! frame_time 33 ms, split 53 ms
-15:12:40  488 moved: ^
-15:12:40  488 moved: <
-15:12:40  488 fired
-15:12:40  488 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-15:12:40  489 moved: ^
-15:12:40  489 moved: <
-15:12:40  489 fired
-15:12:40  489 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:40  490 moved: ^
-15:12:40  490 moved: <
-15:12:40  490 fired
-15:12:40  490 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-15:12:40  491 moved: ^
-15:12:40  491 moved: <
-15:12:40  491 fired
-15:12:40  491 GameManager::run(): Can't keep up! frame_time 33 ms, split 54 ms
-15:12:40  492 moved: ^
-15:12:40  492 moved: <
-15:12:40  492 fired
-15:12:40  492 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:40  493 moved: ^
-15:12:40  493 moved: <
-15:12:40  493 fired
-15:12:40  493 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-15:12:40  494 moved: ^
-15:12:40  494 moved: <
-15:12:40  494 fired
-15:12:40  494 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-15:12:40  495 moved: ^
-15:12:40  495 moved: <
-15:12:40  495 fired
-15:12:40  495 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
-15:12:40  496 moved: ^
-15:12:40  496 moved: <
-15:12:40  496 fired
-15:12:41  496 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:41  497 moved: ^
-15:12:41  497 moved: <
-15:12:41  497 fired
-15:12:41  497 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:41  498 moved: ^
-15:12:41  498 moved: <
-15:12:41  498 fired
-15:12:41  498 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
-15:12:41  499 moved: ^
-15:12:41  499 moved: <
-15:12:41  499 fired
-15:12:41  499 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:41  500 moved: ^
-15:12:41  500 moved: <
-15:12:41  500 fired
-15:12:41  500 GameManager::run(): Can't keep up! frame_time 33 ms, split 63 ms
-15:12:41  501 moved: ^
-15:12:41  501 moved: <
-15:12:41  501 fired
-15:12:41  501 GameManager::run(): Can't keep up! frame_time 33 ms, split 63 ms
-15:12:41  502 moved: <
-15:12:41  502 fired
-15:12:41  502 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:41  503 moved: <
-15:12:41  503 moved: v
-15:12:41  503 moved: v
-15:12:41  503 fired
-15:12:41  503 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:41  504 moved: >
-15:12:41  504 moved: v
-15:12:41  504 moved: >
-15:12:41  504 fired
-15:12:41  504 GameManager::run(): Can't keep up! frame_time 33 ms, split 56 ms
-15:12:41  505 moved: v
-15:12:41  505 moved: >
-15:12:41  505 fired
-15:12:41  505 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-15:12:41  506 moved: v
-15:12:41  506 moved: >
-15:12:41  506 fired
-15:12:41  506 GameManager::run(): Can't keep up! frame_time 33 ms, split 57 ms
-15:12:41  507 moved: v
-15:12:41  507 moved: >
-15:12:41  507 fired
-15:12:41  507 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-15:12:41  508 moved: v
-15:12:41  508 moved: >
-15:12:41  508 fired
-15:12:41  508 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-15:12:41  509 moved: v
-15:12:41  509 moved: >
-15:12:41  509 fired
-15:12:41  509 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
-15:12:41  510 moved: v
-15:12:41  510 moved: >
-15:12:41  510 fired
-15:12:41  510 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-15:12:41  511 moved: v
-15:12:41  511 moved: >
-15:12:41  511 fired
-15:12:41  511 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:41  512 moved: v
-15:12:41  512 moved: >
-15:12:41  512 fired
-15:12:41  512 GameManager::run(): Can't keep up! frame_time 33 ms, split 58 ms
-15:12:41  513 moved: v
-15:12:41  513 moved: >
-15:12:41  513 fired
-15:12:42  513 GameManager::run(): Can't keep up! frame_time 33 ms, split 63 ms
-15:12:42  514 moved: v
-15:12:42  514 moved: >
-15:12:42  514 fired
-15:12:42  514 GameManager::run(): Can't keep up! frame_time 33 ms, split 65 ms
-15:12:42  515 moved: v
-15:12:42  515 moved: >
-15:12:42  515 fired
-15:12:42  515 GameManager::run(): Can't keep up! frame_time 33 ms, split 66 ms
-15:12:42  516 moved: v
-15:12:42  516 moved: >
-15:12:42  516 fired
-15:12:42  516 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:42  517 moved: v
-15:12:42  517 moved: >
-15:12:42  517 fired
-15:12:42  517 GameManager::run(): Can't keep up! frame_time 33 ms, split 74 ms
-15:12:42  518 moved: v
-15:12:42  518 moved: >
-15:12:42  518 fired
-15:12:42  518 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:42  519 moved: v
-15:12:42  519 moved: >
-15:12:42  519 fired
-15:12:42  519 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:42  520 moved: v
-15:12:42  520 moved: >
-15:12:42  520 fired
-15:12:42  520 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:42  521 fired
-15:12:42  521 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:42  522 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:42  523 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:42  524 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:42  525 GameManager::run(): Can't keep up! frame_time 33 ms, split 59 ms
-15:12:42  526 GameManager::run(): Can't keep up! frame_time 33 ms, split 60 ms
-15:12:42  527 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:42  528 GameManager::run(): Can't keep up! frame_time 33 ms, split 67 ms
-15:12:43  529 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:43  530 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:43  531 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:43  532 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:43  533 GameManager::run(): Can't keep up! frame_time 33 ms, split 65 ms
-15:12:43  534 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:43  535 GameManager::run(): Can't keep up! frame_time 33 ms, split 69 ms
-15:12:43  536 GameManager::run(): Can't keep up! frame_time 33 ms, split 67 ms
-15:12:43  537 GameManager::run(): Can't keep up! frame_time 33 ms, split 66 ms
-15:12:43  538 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:43  539 GameManager::run(): Can't keep up! frame_time 33 ms, split 69 ms
-15:12:43  540 GameManager::run(): Can't keep up! frame_time 33 ms, split 81 ms
-15:12:43  541 GameManager::run(): Can't keep up! frame_time 33 ms, split 73 ms
-15:12:43  542 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:43  543 GameManager::run(): Can't keep up! frame_time 33 ms, split 63 ms
-15:12:44  544 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:44  545 GameManager::run(): Can't keep up! frame_time 33 ms, split 68 ms
-15:12:44  546 GameManager::run(): Can't keep up! frame_time 33 ms, split 66 ms
-15:12:44  547 GameManager::run(): Can't keep up! frame_time 33 ms, split 64 ms
-15:12:44  548 GameManager::run(): Can't keep up! frame_time 33 ms, split 65 ms
-15:12:44  549 GameManager::run(): Can't keep up! frame_time 33 ms, split 72 ms
-15:12:44  550 GameManager::run(): Can't keep up! frame_time 33 ms, split 67 ms
-15:12:44  551 GameManager::run(): Can't keep up! frame_time 33 ms, split 61 ms
-15:12:44  552 GameManager::run(): Can't keep up! frame_time 33 ms, split 62 ms
-15:12:44  553 GameManager::run(): Can't keep up! frame_time 33 ms, split 150 ms
-15:12:44  554 ****************************************************
-15:12:44  554 ** Game engine stopped **
+15:16:56    0 ****************************************************
+15:16:56    0 ** Dragonfly version 4.16 **
+15:16:56    0 ** Game engine started **
+15:16:56    0 ****************************************************
+15:16:56    0 Log Manager started.
+15:16:56    0 -----------------------------------
+15:16:56    0 Dragonfly configuration:
+15:16:56    0   Window horizontal pixels: 675
+15:16:56    0   Window vertical pixels: 900
+15:16:56    0   Window horizontal characters: 80
+15:16:56    0   Window vertical characters: 48
+15:16:56    0   Window background color: 0
+15:16:56    0   Frame time: 33
+15:16:56    0   Window style: default
+15:16:56    0   Window title: TooManyBullets
+15:16:56    0   Show mouse: false
+15:16:56    0   Headless: false
+15:16:56    0   Font file: df-font.ttf
+15:16:56    0   Log file: dragonfly.log
+15:16:56    0   Random seed: 0
+15:16:56    0   Networking: false
+15:16:56    0   Scene graph: simple
+15:16:56    0 -----------------------------------
+15:16:56    0 Display manager started.
+15:16:56    0 Input manager started.
+15:16:58    0 Resource manager started.
+15:16:58    0 Scenegraph configuration: SIMPLE
+15:16:58    0 World manager started.
+15:16:58    0 Path manager started.
+15:16:58    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
+15:16:58    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
+15:16:58    0 RM::loadSprite(): Sprite 'player' loaded.
+15:16:58    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
+15:16:58    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
+15:16:58    0 RM::loadSprite(): Sprite 'enemy' loaded.
+15:16:58    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+15:16:58    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
+15:16:58    0 RM::loadSprite(): Sprite 'bullet' loaded.
+15:16:58    0 GameManager::run(): starting game loop
+15:16:59   56 moved: >
+15:16:59   56 moved: >
+15:16:59   57 moved: >
+15:16:59   58 moved: >
+15:16:59   59 moved: >
+15:17:00   60 moved: >
+15:17:00   61 moved: >
+15:17:00   69 moved: <
+15:17:00   69 moved: <
+15:17:00   70 moved: <
+15:17:00   71 moved: <
+15:17:00   72 moved: <
+15:17:00   73 moved: <
+15:17:01  100 moved: >
+15:17:01  100 moved: >
+15:17:01  101 moved: >
+15:17:01  102 moved: >
+15:17:01  103 moved: >
+15:17:07  274 moved: <
+15:17:07  274 moved: v
+15:17:07  274 moved: v
+15:17:07  274 moved: <
+15:17:07  275 moved: v
+15:17:07  275 moved: <
+15:17:07  276 moved: v
+15:17:07  276 moved: <
+15:17:07  277 moved: v
+15:17:07  277 moved: <
+15:17:07  278 moved: v
+15:17:07  278 moved: <
+15:17:07  279 moved: v
+15:17:07  279 moved: <
+15:17:07  280 moved: v
+15:17:07  280 moved: <
+15:17:07  281 moved: v
+15:17:07  281 moved: <
+15:17:07  282 moved: <
+15:17:10  367 moved: ^
+15:17:10  367 moved: ^
+15:17:10  368 moved: <
+15:17:10  368 moved: ^
+15:17:10  368 moved: <
+15:17:10  369 moved: ^
+15:17:10  369 moved: <
+15:17:10  370 moved: ^
+15:17:10  370 moved: <
+15:17:10  371 moved: ^
+15:17:10  371 moved: <
+15:17:10  372 moved: ^
+15:17:10  372 moved: <
+15:17:10  373 moved: ^
+15:17:10  373 moved: <
+15:17:10  374 moved: ^
+15:17:10  374 moved: <
+15:17:10  375 moved: ^
+15:17:10  375 moved: <
+15:17:10  376 moved: ^
+15:17:10  376 moved: <
+15:17:11  377 moved: ^
+15:17:11  377 moved: <
+15:17:11  379 moved: >
+15:17:11  379 moved: >
+15:17:11  380 moved: >
+15:17:11  381 moved: >
+15:17:11  382 moved: >
+15:17:11  383 moved: >
+15:17:11  384 moved: >
+15:17:11  385 moved: >
+15:17:11  386 moved: >
+15:17:11  387 moved: v
+15:17:11  387 moved: v
+15:17:11  387 moved: >
+15:17:11  388 moved: v
+15:17:11  388 moved: >
+15:17:11  389 moved: v
+15:17:11  389 moved: >
+15:17:11  390 moved: v
+15:17:11  390 moved: >
+15:17:11  391 moved: v
+15:17:11  391 moved: >
+15:17:11  392 moved: v
+15:17:11  392 moved: >
+15:17:11  393 moved: v
+15:17:11  393 moved: >
+15:17:11  394 moved: v
+15:17:11  394 moved: >
+15:17:11  395 moved: v
+15:17:11  395 moved: >
+15:17:11  396 moved: v
+15:17:11  396 moved: >
+15:17:11  397 moved: v
+15:17:11  397 moved: >
+15:17:11  398 moved: >
+15:17:11  399 moved: >
+15:17:11  400 moved: >
+15:17:11  401 moved: >
+15:17:11  402 moved: >
+15:17:11  403 moved: <
+15:17:11  403 moved: <
+15:17:11  404 moved: <
+15:17:11  405 moved: <
+15:17:11  406 moved: <
+15:17:11  407 moved: <
+15:17:12  408 moved: <
+15:17:12  409 moved: <
+15:17:12  410 moved: <
+15:17:12  411 moved: <
+15:17:12  412 moved: ^
+15:17:12  412 moved: ^
+15:17:12  412 moved: <
+15:17:12  413 moved: ^
+15:17:12  413 moved: <
+15:17:12  414 moved: ^
+15:17:12  414 moved: <
+15:17:12  415 moved: ^
+15:17:12  415 moved: <
+15:17:12  416 moved: ^
+15:17:12  416 moved: <
+15:17:12  417 moved: <
+15:17:12  418 moved: <
+15:17:12  434 moved: >
+15:17:12  434 moved: >
+15:17:12  435 moved: >
+15:17:12  436 moved: >
+15:17:12  437 moved: >
+15:17:13  438 moved: >
+15:17:13  439 moved: >
+15:17:13  443 fired
+15:17:13  443 fired
+15:17:13  444 fired
+15:17:13  445 fired
+15:17:13  446 fired
+15:17:13  447 fired
+15:17:13  448 fired
+15:17:13  449 fired
+15:17:13  450 fired
+15:17:13  457 moved: <
+15:17:13  457 moved: <
+15:17:13  458 moved: <
+15:17:13  459 moved: <
+15:17:13  460 moved: <
+15:17:13  461 fired
+15:17:13  461 moved: <
+15:17:13  461 fired
+15:17:13  462 moved: <
+15:17:13  462 fired
+15:17:13  463 moved: <
+15:17:13  463 fired
+15:17:13  464 fired
+15:17:13  465 fired
+15:17:13  466 fired
+15:17:13  467 fired
+15:17:14  468 fired
+15:17:14  469 moved: >
+15:17:14  469 moved: >
+15:17:14  469 fired
+15:17:14  470 moved: v
+15:17:14  470 moved: v
+15:17:14  470 moved: >
+15:17:14  470 fired
+15:17:14  471 moved: v
+15:17:14  471 moved: >
+15:17:14  471 fired
+15:17:14  472 moved: v
+15:17:14  472 moved: >
+15:17:14  472 fired
+15:17:14  473 moved: v
+15:17:14  473 moved: >
+15:17:14  473 fired
+15:17:14  474 moved: v
+15:17:14  474 moved: >
+15:17:14  474 fired
+15:17:14  475 moved: v
+15:17:14  475 moved: >
+15:17:14  475 fired
+15:17:14  476 moved: >
+15:17:14  476 fired
+15:17:14  477 moved: >
+15:17:14  477 fired
+15:17:14  478 moved: >
+15:17:14  478 fired
+15:17:14  479 moved: >
+15:17:14  479 fired
+15:17:14  480 moved: >
+15:17:14  480 fired
+15:17:14  481 fired
+15:17:14  482 fired
+15:17:14  483 fired
+15:17:14  484 fired
+15:17:14  485 fired
+15:17:14  486 moved: <
+15:17:14  486 moved: <
+15:17:14  486 fired
+15:17:14  487 moved: <
+15:17:14  487 fired
+15:17:14  488 moved: <
+15:17:14  488 fired
+15:17:14  489 moved: <
+15:17:14  489 fired
+15:17:14  490 moved: <
+15:17:14  490 fired
+15:17:14  491 moved: <
+15:17:14  491 fired
+15:17:14  492 moved: <
+15:17:14  492 fired
+15:17:14  493 moved: <
+15:17:14  493 fired
+15:17:14  494 moved: <
+15:17:14  494 fired
+15:17:14  495 moved: <
+15:17:14  495 fired
+15:17:14  496 moved: <
+15:17:14  496 fired
+15:17:14  497 moved: <
+15:17:14  497 fired
+15:17:15  498 moved: <
+15:17:15  498 fired
+15:17:15  499 fired
+15:17:15  500 fired
+15:17:15  501 moved: >
+15:17:15  501 moved: >
+15:17:15  501 fired
+15:17:15  502 moved: >
+15:17:15  502 fired
+15:17:15  503 moved: >
+15:17:15  503 fired
+15:17:15  504 moved: >
+15:17:15  504 fired
+15:17:15  505 moved: >
+15:17:15  505 fired
+15:17:15  506 moved: >
+15:17:15  506 fired
+15:17:15  507 moved: >
+15:17:15  507 fired
+15:17:15  508 moved: >
+15:17:15  508 fired
+15:17:15  509 moved: >
+15:17:15  509 fired
+15:17:15  510 moved: >
+15:17:15  510 fired
+15:17:15  511 moved: >
+15:17:15  511 fired
+15:17:15  512 fired
+15:17:15  513 fired
+15:17:15  514 fired
+15:17:15  515 fired
+15:17:15  516 fired
+15:17:15  517 fired
+15:17:15  518 fired
+15:17:15  519 fired
+15:17:15  520 fired
+15:17:15  521 fired
+15:17:15  522 fired
+15:17:15  523 fired
+15:17:15  524 fired
+15:17:15  525 fired
+15:17:15  526 fired
+15:17:15  527 fired
+15:17:15  528 fired
+15:17:16  529 fired
+15:17:16  530 fired
+15:17:16  531 fired
+15:17:16  532 fired
+15:17:16  533 moved: <
+15:17:16  533 moved: <
+15:17:16  534 moved: <
+15:17:16  535 moved: <
+15:17:16  536 moved: <
+15:17:16  537 moved: <
+15:17:16  538 moved: <
+15:17:16  539 moved: <
+15:17:16  540 moved: <
+15:17:16  547 fired
+15:17:16  547 fired
+15:17:16  548 fired
+15:17:16  549 fired
+15:17:16  550 fired
+15:17:16  551 moved: <
+15:17:16  551 moved: <
+15:17:16  551 fired
+15:17:16  552 moved: <
+15:17:16  552 fired
+15:17:16  553 moved: <
+15:17:16  553 fired
+15:17:16  554 moved: <
+15:17:16  554 fired
+15:17:16  555 fired
+15:17:16  556 fired
+15:17:16  557 moved: >
+15:17:16  557 moved: >
+15:17:16  557 fired
+15:17:16  558 moved: >
+15:17:16  558 fired
+15:17:17  559 moved: >
+15:17:17  559 fired
+15:17:17  560 moved: >
+15:17:17  560 fired
+15:17:17  561 moved: >
+15:17:17  561 fired
+15:17:17  562 moved: >
+15:17:17  562 fired
+15:17:17  563 fired
+15:17:17  564 fired
+15:17:17  565 fired
+15:17:17  566 fired
+15:17:17  567 fired
+15:17:17  568 fired
+15:17:17  569 fired
+15:17:17  570 fired
+15:17:17  571 moved: <
+15:17:17  571 moved: <
+15:17:17  571 fired
+15:17:17  572 moved: <
+15:17:17  572 fired
+15:17:17  573 moved: <
+15:17:17  573 fired
+15:17:17  574 moved: <
+15:17:17  574 fired
+15:17:17  575 moved: <
+15:17:17  575 fired
+15:17:17  576 moved: <
+15:17:17  576 fired
+15:17:17  577 moved: <
+15:17:17  577 fired
+15:17:17  578 fired
+15:17:17  579 fired
+15:17:17  580 fired
+15:17:17  581 moved: >
+15:17:17  581 moved: >
+15:17:17  581 fired
+15:17:17  582 moved: >
+15:17:17  582 fired
+15:17:17  583 moved: >
+15:17:17  583 fired
+15:17:17  584 moved: >
+15:17:17  584 fired
+15:17:17  585 moved: >
+15:17:17  585 fired
+15:17:17  586 moved: >
+15:17:17  586 fired
+15:17:17  587 moved: >
+15:17:17  587 fired
+15:17:17  588 moved: >
+15:17:17  588 fired
+15:17:18  589 moved: >
+15:17:18  589 fired
+15:17:18  590 moved: >
+15:17:18  590 fired
+15:17:18  591 moved: >
+15:17:18  591 fired
+15:17:18  592 moved: >
+15:17:18  592 fired
+15:17:18  593 moved: >
+15:17:18  593 fired
+15:17:18  594 moved: >
+15:17:18  594 fired
+15:17:18  595 fired
+15:17:18  596 fired
+15:17:18  597 fired
+15:17:18  598 fired
+15:17:18  599 moved: <
+15:17:18  599 moved: <
+15:17:18  599 fired
+15:17:18  600 moved: <
+15:17:18  600 fired
+15:17:18  601 moved: <
+15:17:18  601 fired
+15:17:18  602 moved: <
+15:17:18  602 fired
+15:17:18  603 moved: <
+15:17:18  603 fired
+15:17:18  604 moved: <
+15:17:18  604 fired
+15:17:18  605 moved: <
+15:17:18  605 fired
+15:17:18  606 fired
+15:17:18  607 fired
+15:17:18  608 fired
+15:17:18  609 fired
+15:17:20  665 InputManager::getInput(): Window close event. Setting game over.
+15:17:20  666 GameManager::run(): end of game loop

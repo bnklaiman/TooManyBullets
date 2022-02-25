@@ -1,14 +1,15 @@
 <HEADER>
-frames 2
-width 1
-height 1
-color blue
-slowdown 5
+frames 1
+width 4
+height 4
+color white
+slowdown 1
 </HEADER>
 <BODY>
-O
-end
-o
+||||
+!!!!
+||||
+!!!!
 end
 </BODY>
 <FOOTER>

@@ -162,6 +162,7 @@
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\df-config.txt" />
     <Text Include="..\dragonfly.log" />
     <Text Include="..\sprites\bullet-spr.txt" />
     <Text Include="..\sprites\player-chr.txt" />

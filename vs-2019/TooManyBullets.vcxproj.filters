@@ -41,6 +41,9 @@
     <Text Include="..\dragonfly.log">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="..\df-config.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h">

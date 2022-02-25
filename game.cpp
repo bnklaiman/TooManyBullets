@@ -3,9 +3,12 @@
 #include "GameManager.h"
 #include "LogManager.h"
 #include "ResourceManager.h"
+#include "WorldManager.h"
 
 #include "vs-2019/Enemy.h"
 #include "vs-2019/Player.h"
+
+#include <direct.h>
 
 void loadResources() {
 	RM.loadSprite("sprites/player-chr.txt", "player");
@@ -18,11 +21,8 @@ void populateWorld() {
 	new Enemy;
 }
 
-int main(int argc, char* argv[]) {
-
-	DM.startUp();
-	DM.getWindow()->setTitle("Sample Text");
-
+int main(int argc, char* argv[]) {	
+	LM.setLogLevel(1);
 	// Start up game manager.
 	if (GM.startUp()) {
 		LM.writeLog("Error starting game manager!");
@@ -45,6 +45,4 @@ int main(int argc, char* argv[]) {
 	GM.run();
 
 	// Shut everything down.
-	GM.shutDown();
-	DM.shutDown();
 }
