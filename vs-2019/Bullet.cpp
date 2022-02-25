@@ -13,8 +13,7 @@ Bullet::Bullet(df::Vector hero_pos) {
 
 	// Bullets move each game loop
 	// The direction is set when the hero fires
-	setSpeed(1);
-
+	
 	// Make the Bullets soft so can pass through stuff
 	setSolidness(df::SOFT);
 }

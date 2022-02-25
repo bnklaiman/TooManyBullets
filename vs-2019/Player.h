@@ -8,6 +8,7 @@ private:
 	void kbd(const df::EventKeyboard* p_keyboard_event);
 	void move(int dx, int dy);
 	void fire();
+	int step = 0;
 
 public:
 	Player();

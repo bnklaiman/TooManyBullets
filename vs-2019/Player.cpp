@@ -5,17 +5,23 @@
 
 #include "Bullet.h"
 #include "Player.h"
+#include "EventStep.h"
+
+#define MAX_FIRE_STEPS 3
 
 Player::Player() {
 	// Set up "player" sprite
 	setSprite("player");
 
 	registerInterest(df::KEYBOARD_EVENT);
+	registerInterest(df::STEP_EVENT);
 
 	// Set object type
 	setType("Player");
 	df::Vector p(WM.getBoundary().getHorizontal() / 2, WM.getBoundary().getVertical() / 2);
 	setPosition(p);
+
+	step = 0;
 }
 
 // Only respond to "keyboard event"
@@ -25,7 +31,12 @@ int Player::eventHandler(const df::Event* p_e) {
 		const df::EventKeyboard* p_keyboard_event = dynamic_cast<const df::EventKeyboard*> (p_e);
 		kbd(p_keyboard_event);
 		return 1;
+	} else if (p_e->getType() == df::STEP_EVENT) {
+		// create the illusion of rapid fire so it's not just a column of bullets (part 1)
+		step++;
+		if (step >= MAX_FIRE_STEPS) step = 0;
 	}
+	LM.writeLog("current step: %d", step);
 	return 0;
 }
 
@@ -75,7 +86,10 @@ void Player::move(int dx, int dy) {
 }
 
 void Player::fire() {
-	df::Vector v = df::Vector(0, -1);
-	Bullet* p = new Bullet(getPosition());
-	p->setVelocity(v);
+	// create the illusion of rapid fire so it's not just a column of bullets (part 2)
+	if (step % MAX_FIRE_STEPS != 2) {
+		df::Vector v = df::Vector(0, -2);
+		Bullet* p = new Bullet(getPosition());
+		p->setVelocity(v);
+	}
 }
