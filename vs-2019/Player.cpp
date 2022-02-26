@@ -81,9 +81,14 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 // Move around
 void Player::move(float dx, float dy) {
 	// If stays on window, allow move
-	df::Vector new_pos(getPosition().getX() + dx, getPosition().getY() + dy);
-	if ((new_pos.getY() > 1) && (new_pos.getY() < WM.getBoundary().getVertical() - 1) &&
-	   (new_pos.getX() > 1) && (new_pos.getX() < WM.getBoundary().getHorizontal() - 1)) {
+	df::Vector oldPos = getPosition();
+	df::Vector new_pos(oldPos.getX() + dx, oldPos.getY() + dy);
+	/*WM.moveObject(this, new_pos);
+	if (!df::boxContainsBox(WM.getBoundary(), df::getWorldBox(this))) {
+		WM.moveObject(this, oldPos);
+	}*/
+	if ((new_pos.getY() > 1) && (new_pos.getY() < WM.getBoundary().getVertical() - (getBox().getVertical() / 2)) &&
+	   (new_pos.getX() > 1) && (new_pos.getX() < WM.getBoundary().getHorizontal() - (getBox().getHorizontal() / 2))) {
 		WM.moveObject(this, new_pos);
 	}
 }
