@@ -102,5 +102,13 @@ void Player::fire() {
 		df::Vector v = df::Vector(0, -3);
 		HeroBullet* p = new HeroBullet(getPosition(), true);
 		p->setVelocity(v);
+		df::Vector v1 = df::Vector(-1.5, -1);
+		df::Vector v2 = df::Vector(1.5, -1);
+		Bullet* s1 = new Bullet(getPosition(), true);
+		Bullet* s2 = new Bullet(getPosition(), true);
+		s1->setDirection(v1);
+		s2->setDirection(v2);
+		s1->setSpeed(3);
+		s2->setSpeed(3);
 	}
 }

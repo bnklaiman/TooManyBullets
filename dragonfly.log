@@ -1,52 +1,52 @@
-04:16:53    0 ****************************************************
-04:16:53    0 ** Dragonfly version 4.16 **
-04:16:53    0 ** Game engine started **
-04:16:53    0 ****************************************************
-04:16:53    0 Log Manager started.
-04:16:53    0 -----------------------------------
-04:16:53    0 Dragonfly configuration:
-04:16:53    0   Window horizontal pixels: 675
-04:16:53    0   Window vertical pixels: 900
-04:16:53    0   Window horizontal characters: 72
-04:16:53    0   Window vertical characters: 50
-04:16:53    0   Window background color: 0
-04:16:53    0   Frame time: 33
-04:16:53    0   Window style: default
-04:16:53    0   Window title: TooManyBullets
-04:16:53    0   Show mouse: false
-04:16:53    0   Headless: false
-04:16:53    0   Font file: df-font.ttf
-04:16:53    0   Log file: dragonfly.log
-04:16:53    0   Random seed: 0
-04:16:53    0   Networking: false
-04:16:53    0   Scene graph: simple
-04:16:53    0 -----------------------------------
-04:16:54    0 Display manager started.
-04:16:54    0 Input manager started.
-04:16:55    0 Resource manager started.
-04:16:55    0 Scenegraph configuration: SIMPLE
-04:16:55    0 World manager started.
-04:16:55    0 Path manager started.
-04:16:55    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
-04:16:55    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
-04:16:55    0 RM::loadSprite(): Sprite 'player' loaded.
-04:16:55    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
-04:16:55    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
-04:16:55    0 RM::loadSprite(): Sprite 'enemy' loaded.
-04:16:55    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-04:16:55    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
-04:16:55    0 RM::loadSprite(): Sprite 'bullet' loaded.
-04:16:55    0 RM::loadSprite(): Loading sprite 'sprites/hero-bullet-spr.txt'.
-04:16:55    0 RM::loadSprite(): Opened file 'sprites/hero-bullet-spr.txt'.
-04:16:55    0 RM::loadSprite(): Sprite 'herobullet' loaded.
-04:16:55    0 GameManager::run(): starting game loop
-04:17:07  354 InputManager::getInput(): Window close event. Setting game over.
-04:17:07  355 GameManager::run(): end of game loop
-04:17:07  355 Path manager stopped
-04:17:07  355 Manager::shutDown(): Warning! WorldManager not started.
-04:17:07  355 World manager stopped
-04:17:07  355 Resource manager stopped
-04:17:07  355 Input manager stopped
-04:17:07  355 Display manager stopped
-04:17:07  355 ****************************************************
-04:17:07  355 ** Game engine stopped **
+17:57:24    0 ****************************************************
+17:57:24    0 ** Dragonfly version 4.16 **
+17:57:24    0 ** Game engine started **
+17:57:24    0 ****************************************************
+17:57:24    0 Log Manager started.
+17:57:24    0 -----------------------------------
+17:57:24    0 Dragonfly configuration:
+17:57:24    0   Window horizontal pixels: 675
+17:57:24    0   Window vertical pixels: 900
+17:57:24    0   Window horizontal characters: 72
+17:57:24    0   Window vertical characters: 50
+17:57:24    0   Window background color: 0
+17:57:24    0   Frame time: 33
+17:57:24    0   Window style: default
+17:57:24    0   Window title: TooManyBullets
+17:57:24    0   Show mouse: false
+17:57:24    0   Headless: false
+17:57:24    0   Font file: df-font.ttf
+17:57:24    0   Log file: dragonfly.log
+17:57:24    0   Random seed: 0
+17:57:24    0   Networking: false
+17:57:24    0   Scene graph: simple
+17:57:24    0 -----------------------------------
+17:57:25    0 Display manager started.
+17:57:25    0 Input manager started.
+17:57:26    0 Resource manager started.
+17:57:26    0 Scenegraph configuration: SIMPLE
+17:57:26    0 World manager started.
+17:57:26    0 Path manager started.
+17:57:26    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
+17:57:26    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
+17:57:26    0 RM::loadSprite(): Sprite 'player' loaded.
+17:57:26    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
+17:57:26    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
+17:57:26    0 RM::loadSprite(): Sprite 'enemy' loaded.
+17:57:26    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+17:57:26    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
+17:57:26    0 RM::loadSprite(): Sprite 'bullet' loaded.
+17:57:26    0 RM::loadSprite(): Loading sprite 'sprites/hero-bullet-spr.txt'.
+17:57:26    0 RM::loadSprite(): Opened file 'sprites/hero-bullet-spr.txt'.
+17:57:26    0 RM::loadSprite(): Sprite 'herobullet' loaded.
+17:57:26    0 GameManager::run(): starting game loop
+17:57:37  316 InputManager::getInput(): Window close event. Setting game over.
+17:57:37  317 GameManager::run(): end of game loop
+17:57:37  317 Path manager stopped
+17:57:37  317 Manager::shutDown(): Warning! WorldManager not started.
+17:57:37  317 World manager stopped
+17:57:37  317 Resource manager stopped
+17:57:37  317 Input manager stopped
+17:57:37  317 Display manager stopped
+17:57:37  317 ****************************************************
+17:57:37  317 ** Game engine stopped **
