@@ -1,0 +1,50 @@
+21:52:26    0 ****************************************************
+21:52:26    0 ** Dragonfly version 4.16 **
+21:52:26    0 ** Game engine started **
+21:52:26    0 ****************************************************
+21:52:26    0 Log Manager started.
+21:52:26    0 -----------------------------------
+21:52:26    0 Dragonfly configuration:
+21:52:26    0   Window horizontal pixels: 675
+21:52:26    0   Window vertical pixels: 900
+21:52:26    0   Window horizontal characters: 72
+21:52:26    0   Window vertical characters: 50
+21:52:26    0   Window background color: 0
+21:52:26    0   Frame time: 33
+21:52:26    0   Window style: default
+21:52:26    0   Window title: TooManyBullets
+21:52:26    0   Show mouse: false
+21:52:26    0   Headless: false
+21:52:26    0   Font file: df-font.ttf
+21:52:26    0   Log file: dragonfly.log
+21:52:26    0   Random seed: 0
+21:52:26    0   Networking: false
+21:52:26    0   Scene graph: simple
+21:52:26    0 -----------------------------------
+21:52:27    0 Display manager started.
+21:52:27    0 Input manager started.
+21:52:28    0 Resource manager started.
+21:52:28    0 Scenegraph configuration: SIMPLE
+21:52:28    0 World manager started.
+21:52:28    0 Path manager started.
+21:52:28    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
+21:52:28    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
+21:52:28    0 RM::loadSprite(): Sprite 'player' loaded.
+21:52:28    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
+21:52:28    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
+21:52:28    0 RM::loadSprite(): Sprite 'enemy' loaded.
+21:52:28    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+21:52:28    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
+21:52:28    0 RM::loadSprite(): Sprite 'bullet' loaded.
+21:52:28    0 GameManager::run(): starting game loop
+21:52:29   17 moved: <
+21:52:29   17 moved: <
+21:52:29   18 moved: <
+21:52:30   19 moved: <
+21:52:30   20 moved: <
+21:52:30   30 fired
+21:52:30   30 fired
+21:52:30   31 fired
+21:52:30   36 Bullet marked for deletion.
+21:52:31   74 InputManager::getInput(): Window close event. Setting game over.
+21:52:31   75 GameManager::run(): end of game loop

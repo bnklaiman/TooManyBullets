@@ -25,6 +25,9 @@ int main(int argc, char* argv[]) {
 	LM.setLogLevel(1);
 	// Start up game manager.
 	if (GM.startUp()) {
+		char tmp[256];
+		_getcwd(tmp, 256);
+		LM.writeLog("Working directory: %s", tmp);
 		LM.writeLog("Error starting game manager!");
 		GM.shutDown();
 		return 0;

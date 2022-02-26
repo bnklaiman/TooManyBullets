@@ -2,6 +2,8 @@
 #include "EventStep.h"
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "EventOut.h"
+
 
 Bullet::Bullet(df::Vector hero_pos) {
 	setSprite("bullet");
@@ -23,10 +25,8 @@ int Bullet::eventHandler(const df::Event* p_e) {
 		const df::EventCollision* p_collision_event = dynamic_cast<const df::EventCollision*> (p_e);
 		hit(p_collision_event);
 		return 1;
-	} else if (p_e->getType() == df::STEP_EVENT) {
-		if (getPosition().getY() < 0 || getPosition().getY() > WM.getBoundary().getVertical()) {
-			out();
-		}
+	} else if (p_e->getType() == df::OUT_EVENT) {
+		out();
 	}
 	return 0;
 }
