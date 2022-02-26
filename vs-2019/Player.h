@@ -6,9 +6,10 @@
 class Player : public df::Object {
 private:
 	void kbd(const df::EventKeyboard* p_keyboard_event);
-	void move(int dx, int dy);
+	void move(float dx, float dy);
 	void fire();
-	int step = 0;
+	int fireSlowdown;
+	int fireCooldown;
 
 public:
 	Player();
