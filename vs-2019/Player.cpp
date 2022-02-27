@@ -23,6 +23,8 @@ Player::Player() {
 
 	fireSlowdown = 3;
 	fireCooldown = fireSlowdown;
+
+	slowmode = false;
 }
 
 // Only respond to "keyboard event"
@@ -46,8 +48,7 @@ int Player::eventHandler(const df::Event* p_e) {
 // Take appropriate action according to key pressed
 void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 	float moveSpeed = 0.2;
-	// if slowmode
-		// movespeed *= 0.5
+	if (slowmode) moveSpeed *= 0.5;
 	float charWidth = df::charWidth(); //DM.getHorizontalPixels() / DM.getHorizontal();
 	float charHeight = df::charHeight() / 3;  //DM.getVerticalPixels() / DM.getVertical();
 	switch (p_keyboard_event->getKey()) {
@@ -75,6 +76,10 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) fire();
 		//LM.writeLog("fired");
 		break;
+	case df::Keyboard::LEFTSHIFT:
+	case df::Keyboard::RIGHTSHIFT:
+		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) slowmode = true;
+		if (p_keyboard_event->getKeyboardAction() == df::KEY_RELEASED) slowmode = false;
 	}
 }
 
@@ -99,16 +104,30 @@ void Player::fire() {
 	if (fireCooldown <= 0) {
 		//LM.writeLog("fired");
 		fireCooldown = fireSlowdown;
-		df::Vector v = df::Vector(0, -3);
+		df::Vector v = df::Vector(0, -2);
 		HeroBullet* p = new HeroBullet(getPosition(), true);
 		p->setVelocity(v);
-		df::Vector v1 = df::Vector(-1.5, -1);
-		df::Vector v2 = df::Vector(1.5, -1);
-		Bullet* s1 = new Bullet(getPosition(), true);
-		Bullet* s2 = new Bullet(getPosition(), true);
-		s1->setDirection(v1);
-		s2->setDirection(v2);
-		s1->setSpeed(3);
-		s2->setSpeed(3);
+		df::Vector p1 = getPosition();
+		df::Vector p2(p1);
+		int dx = 1.5;
+		if (slowmode) dx = 3;
+		p1 += df::Vector(-dx, -1);
+		p2 += df::Vector(dx, -1);
+		Bullet* s1 = new Bullet(p1, true);
+		Bullet* s2 = new Bullet(p2, true);
+		if (!slowmode) {
+			df::Vector v1 = df::Vector(-2.5, -1);
+			df::Vector v2 = df::Vector(2.5, -1);
+			s1->setDirection(v1);
+			s2->setDirection(v2);
+		} else {
+			df::Vector d = df::Vector(0, -1);
+			s1->setDirection(d);
+			s2->setDirection(d);
+		}
+		s1->setSpeed(2);
+		s2->setSpeed(2);
+		s1->setSprite("circleflashbullet");
+		s2->setSprite("circleflashbullet");
 	}
 }

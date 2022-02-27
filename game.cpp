@@ -15,6 +15,7 @@ void loadResources() {
 	RM.loadSprite("sprites/enemy-chr.txt", "enemy");
 	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
 	RM.loadSprite("sprites/hero-bullet-spr.txt", "herobullet");
+	RM.loadSprite("sprites/circle-flash-bullet-spr.txt", "circleflashbullet");
 }
 
 void populateWorld() {
