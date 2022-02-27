@@ -1,0 +1,20 @@
+<HEADER>
+frames 4
+width 1
+height 1
+color cyan
+slowdown 7
+</HEADER>
+<BODY>
+O
+end
+o
+end
+*
+end
+o
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

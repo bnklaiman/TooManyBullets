@@ -10,6 +10,7 @@ private:
 	void fire();
 	int fireSlowdown;
 	int fireCooldown;
+	bool slowmode;
 
 public:
 	Player();
