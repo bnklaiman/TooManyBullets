@@ -1,30 +1,40 @@
 <HEADER>
 frames 2
-width 70
-height 9
+width 58
+height 14
 color yellow
 slowdown 15
 </HEADER>
 <BODY>
-     _____                               _____ __                __   
-    / ___/____ ___  __________  _____   / ___// /_  ____  ____  / /_  
-    \__ \/ __ `/ / / / ___/ _ \/ ___/   \__ \/ __ \/ __ \/ __ \/ __/  
-   ___/ / /_/ / /_/ / /__/  __/ /      ___/ / / / / /_/ / /_/ / /_    
-  /____/\__,_/\__,_/\___/\___/_/      /____/_/ /_/\____/\____/\__/    
-                                                                      
-     Controls: 'w'/'s' moves, Mouse fires, Space nukes, 'q' quits     
-                                                                      
-                    Press 'p' to play, 'q' to quit                    
+888888  dP"Yb   dP"Yb      8b    d8    db    88b 88 Yb  dP
+  88   dP   Yb dP   Yb     88b  d88   dPYb   88Yb88  YbdP 
+  88   Yb   dP Yb   dP     88YbdP88  dP__Yb  88 Y88   8P  
+  88    YbodP   YbodP      88 YY 88 dP""""Yb 88  Y8  dP   
+                                                          
+    88""Yb 88   88 88     88     888888 888888 .dP"Y8     
+    88__dP 88   88 88     88     88__     88   `Ybo."     
+    88""Yb Y8   8P 88  .o 88  .o 88""     88   o.`Y8b     
+    88oodP `YbodP' 88ood8 88ood8 888888   88   8bodP'     
+                                                          
+     Controls:  W  /  ^  moves, 'Z' fires, 'q' quits      
+               ASD   <v>                                  
+                                                          
+              Press 'p' to play, 'q' to quit              
 end
-     _____                               _____ __                __   
-    / ___/____ ___  __________  _____   / ___// /_  ____  ____  / /_  
-    \__ \/ __ `/ / / / ___/ _ \/ ___/   \__ \/ __ \/ __ \/ __ \/ __/  
-   ___/ / /_/ / /_/ / /__/  __/ /      ___/ / / / / /_/ / /_/ / /_    
-  /____/\__,_/\__,_/\___/\___/_/      /____/_/ /_/\____/\____/\__/    
-                                                                      
-     Controls: 'w'/'s' moves, Mouse fires, Space nukes, 'q' quits     
-                                                                      
-                                                                      
+888888  dP"Yb   dP"Yb      8b    d8    db    88b 88 Yb  dP
+  88   dP   Yb dP   Yb     88b  d88   dPYb   88Yb88  YbdP 
+  88   Yb   dP Yb   dP     88YbdP88  dP__Yb  88 Y88   8P  
+  88    YbodP   YbodP      88 YY 88 dP""""Yb 88  Y8  dP   
+                                                          
+    88""Yb 88   88 88     88     888888 888888 .dP"Y8     
+    88__dP 88   88 88     88     88__     88   `Ybo."     
+    88""Yb Y8   8P 88  .o 88  .o 88""     88   o.`Y8b     
+    88oodP `YbodP' 88ood8 88ood8 888888   88   8bodP'     
+                                                          
+     Controls:  W  /  ^  moves, 'Z' fires, 'q' quits      
+               ASD   <v>                                  
+                                                          
+                                                          
 end
 </BODY>
 <FOOTER>

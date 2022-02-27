@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Object.h"
+#include <EventCollision.h>
+#include <Object.h>
 
 class Enemy : public df::Object {
 public:

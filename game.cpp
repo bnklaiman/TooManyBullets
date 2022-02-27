@@ -1,11 +1,12 @@
 // Engine includes.
-#include "DisplayManager.h"
-#include "GameManager.h"
-#include "LogManager.h"
-#include "ResourceManager.h"
-#include "WorldManager.h"
+#include <DisplayManager.h>
+#include <GameManager.h>
+#include <LogManager.h>
+#include <ResourceManager.h>
+#include <WorldManager.h>
 
 #include "vs-2019/Enemy.h"
+#include "vs-2019/GameStart.h"
 #include "vs-2019/Player.h"
 
 #include <direct.h>
@@ -15,12 +16,16 @@ void loadResources() {
 	RM.loadSprite("sprites/enemy-chr.txt", "enemy");
 	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
 	RM.loadSprite("sprites/hero-bullet-spr.txt", "herobullet");
+	RM.loadSprite("sprites/explosion-spr.txt", "explosion");
+	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
+	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 	RM.loadSprite("sprites/circle-flash-bullet-spr.txt", "circleflashbullet");
 }
 
 void populateWorld() {
-	Player* player = new Player();
-	new Enemy;
+	// stars go here
+
+	new GameStart();
 }
 
 int main(int argc, char* argv[]) {	

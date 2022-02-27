@@ -1,10 +1,11 @@
-#include "LogManager.h"
-#include "ResourceManager.h"
-#include "WorldManager.h"
-#include "EventStep.h"
-#include "utility.h"
+#include <LogManager.h>
+#include <ResourceManager.h>
+#include <WorldManager.h>
+#include <EventStep.h>
+#include <utility.h>
 
 #include "Enemy.h"
+#include "Explosion.h"
 #include "Bullet.h"
 
 #include <random>
@@ -16,6 +17,8 @@ Enemy::Enemy() {
 
 	// Set object type
 	setType("Enemy");
+
+	setSolidness(df::HARD);
 
 	// Set starting location at top of window, random x-axis
 	int world_horiz = (int)WM.getBoundary().getHorizontal();
