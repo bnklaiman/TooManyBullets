@@ -57,7 +57,7 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		}
 	}
 
-	if (p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player" && shooter == "Enemy") {
+	if ((p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player") && shooter != "Player") {
 		WM.markForDelete(p_collision_event->getObject1());
 		WM.markForDelete(p_collision_event->getObject2());
 

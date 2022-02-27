@@ -134,5 +134,8 @@ void Player::fire() {
 		s2->setSpeed(2);
 		s1->setSprite("circleflashbullet");
 		s2->setSprite("circleflashbullet");
+		p->shooter = getType();
+		s1->shooter = getType();
+		s2->shooter = getType();
 	}
 }
