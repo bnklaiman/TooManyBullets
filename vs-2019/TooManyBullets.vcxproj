@@ -153,6 +153,9 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="GameStart.h" />
     <ClInclude Include="HeroBullet.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
@@ -160,6 +163,9 @@
     <ClCompile Include="..\game.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="HeroBullet.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
@@ -167,8 +173,13 @@
     <Text Include="..\df-config.txt" />
     <Text Include="..\dragonfly.log" />
     <Text Include="..\sprites\bullet-spr.txt" />
+    <Text Include="..\sprites\explosion-spr.txt" />
+    <Text Include="..\sprites\gameover-spr.txt" />
+    <Text Include="..\sprites\gamestart-spr.txt" />
+    <Text Include="..\sprites\hero-bullet-spr.txt" />
     <Text Include="..\sprites\player-chr.txt" />
     <Text Include="..\sprites\enemy-chr.txt" />
+    <Text Include="..\sprites\ship-spr.txt" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

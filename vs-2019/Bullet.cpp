@@ -1,9 +1,11 @@
-#include "Bullet.h"
-#include "EventStep.h"
-#include "LogManager.h"
-#include "WorldManager.h"
-#include "EventOut.h"
+#include <EventOut.h>
+#include <EventStep.h>
+#include <LogManager.h>
+#include <WorldManager.h>
 
+#include "Bullet.h"
+#include "Explosion.h"
+#include "GameOver.h"
 
 Bullet::Bullet(df::Vector initialPosition, bool newDeleteOnOut) {
 	setSprite("bullet");
@@ -39,10 +41,34 @@ void Bullet::out() {
 
 // If Bullet hits enemy, mark Enemy and Bullet for deletion
 void Bullet::hit(const df::EventCollision* p_collision_event) {
+	
 	if (((p_collision_event->getObject1()->getType() == "Enemy") ||
 		(p_collision_event->getObject2()->getType() == "Enemy")) 
-		&& shooter != "Enemy" ){
+		&& shooter != "Enemy") {
 		WM.markForDelete(p_collision_event->getObject1());
 		WM.markForDelete(p_collision_event->getObject2());
+		
+		if (p_collision_event->getObject1()->getType() == "Enemy") {
+			Explosion* p_explosion = new Explosion;
+			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
+		} else if (p_collision_event->getObject2()->getType() == "Enemy") {
+			Explosion* p_explosion = new Explosion;
+			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
+		}
+	}
+
+	if (p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player" && shooter == "Enemy") {
+		WM.markForDelete(p_collision_event->getObject1());
+		WM.markForDelete(p_collision_event->getObject2());
+
+		if (p_collision_event->getObject1()->getType() == "Player") {
+			Explosion* p_explosion = new Explosion;
+			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
+		} else if (p_collision_event->getObject2()->getType() == "Player") {
+			Explosion* p_explosion = new Explosion;
+			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
+		}
+
+		new GameOver;
 	}
 }

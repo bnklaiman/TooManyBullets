@@ -1,13 +1,13 @@
-#include "LogManager.h"
-#include "WorldManager.h"
-#include "ResourceManager.h"
-#include "DisplayManager.h"
+#include <EventStep.h>
+#include <LogManager.h>
+#include <WorldManager.h>
+#include <ResourceManager.h>
+#include <DisplayManager.h>
 
 #include "Bullet.h"
-#include "Player.h"
-#include "EventStep.h"
+#include "GameOver.h"
 #include "HeroBullet.h"
-
+#include "Player.h"
 
 Player::Player() {
 	// Set up "player" sprite
@@ -20,9 +20,15 @@ Player::Player() {
 	setType("Player");
 	df::Vector p(WM.getBoundary().getHorizontal() / 2,  3 * WM.getBoundary().getVertical() / 4);
 	setPosition(p);
+	setSolidness(df::HARD);
 
 	fireSlowdown = 3;
 	fireCooldown = fireSlowdown;
+}
+
+Player::~Player() {
+	// Create GameOver object
+	new GameOver;
 }
 
 // Only respond to "keyboard event"
@@ -54,26 +60,25 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 	case df::Keyboard::W:
 	case df::Keyboard::UPARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, -moveSpeed * charHeight);
-		//LM.writeLog("moved: ^");
 		break;
 	case df::Keyboard::A:
 	case df::Keyboard::LEFTARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(-moveSpeed * charWidth, 0);
-		//LM.writeLog("moved: <");
 		break;
 	case df::Keyboard::S:
 	case df::Keyboard::DOWNARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, moveSpeed * charHeight);
-		//LM.writeLog("moved: v");
 		break;
 	case df::Keyboard::D:
 	case df::Keyboard::RIGHTARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(moveSpeed * charWidth, 0);
-		//LM.writeLog("moved: >");
 		break;
 	case df::Keyboard::Z:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) fire();
-		//LM.writeLog("fired");
+		break;
+	case df::Keyboard::Q:
+		// quit
+		if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED) WM.markForDelete(this);
 		break;
 	}
 }

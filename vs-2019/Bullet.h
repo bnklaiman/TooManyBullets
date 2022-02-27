@@ -1,6 +1,6 @@
 #pragma once
-#include "Object.h"
-#include "EventCollision.h"
+#include <Object.h>
+#include <EventCollision.h>
 
 #include <string>
 

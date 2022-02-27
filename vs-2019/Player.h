@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Object.h"
-#include "EventKeyboard.h"
+#include <Object.h>
+#include <EventKeyboard.h>
 
 class Player : public df::Object {
 private:
@@ -13,5 +13,6 @@ private:
 
 public:
 	Player();
+	~Player();
 	int eventHandler(const df::Event* p_e) override;
 };
