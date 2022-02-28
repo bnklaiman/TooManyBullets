@@ -3,6 +3,7 @@
 #include <WorldManager.h>
 #include <ResourceManager.h>
 #include <DisplayManager.h>
+#include <Sound.h>
 
 #include "Bullet.h"
 #include "GameOver.h"
@@ -111,6 +112,11 @@ void Player::fire() {
 		fireCooldown = fireSlowdown;
 		df::Vector v = df::Vector(0, -2);
 		HeroBullet* p = new HeroBullet(getPosition(), true);
+
+		// Play "fire" sound
+		df::Sound* p_sound = RM.getSound("fire");
+		p_sound->play();
+
 		p->setVelocity(v);
 		df::Vector p1 = getPosition();
 		df::Vector p2(p1);

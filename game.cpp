@@ -20,6 +20,10 @@ void loadResources() {
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
 	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 	RM.loadSprite("sprites/circle-flash-bullet-spr.txt", "circleflashbullet");
+
+	RM.loadSound("sfx/plst00.wav", "fire");
+	RM.loadSound("sfx/tan00.wav", "enemyhit");
+	RM.loadSound("sfx/pldead00.wav", "playerhit");
 }
 
 void populateWorld() {

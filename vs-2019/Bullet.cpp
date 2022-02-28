@@ -1,6 +1,8 @@
 #include <EventOut.h>
 #include <EventStep.h>
 #include <LogManager.h>
+#include <ResourceManager.h>
+#include <Sound.h>
 #include <WorldManager.h>
 
 #include "Bullet.h"
@@ -50,9 +52,19 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		
 		if (p_collision_event->getObject1()->getType() == "Enemy") {
 			Explosion* p_explosion = new Explosion;
+
+			// Play "enemy hit" sound
+			df::Sound* p_sound = RM.getSound("enemyhit");
+			p_sound->play();
+
 			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
 		} else if (p_collision_event->getObject2()->getType() == "Enemy") {
 			Explosion* p_explosion = new Explosion;
+
+			// Play "enemy hit" sound
+			df::Sound* p_sound = RM.getSound("enemyhit");
+			p_sound->play();
+
 			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
 		}
 	}
@@ -63,9 +75,19 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 
 		if (p_collision_event->getObject1()->getType() == "Player") {
 			Explosion* p_explosion = new Explosion;
+
+			// Play "player hit" sound
+			df::Sound* p_sound = RM.getSound("playerhit");
+			p_sound->play();
+
 			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
 		} else if (p_collision_event->getObject2()->getType() == "Player") {
 			Explosion* p_explosion = new Explosion;
+
+			// Play "player hit" sound
+			df::Sound* p_sound = RM.getSound("playerhit");
+			p_sound->play();
+
 			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
 		}
 
