@@ -11,7 +11,7 @@
 # ...
 
 # Window dimensions in pixels.
-window_horizontal_pixels:675,
+window_horizontal_pixels:700,
 window_vertical_pixels:900,
 
 # Window dimensions in characters.

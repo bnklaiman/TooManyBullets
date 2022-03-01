@@ -4,6 +4,7 @@
 #include <WorldManager.h>
 
 #include "GameOver.h"
+#include "GameStart.h"
 
 GameOver::GameOver() {
 	setType("GameOver");
@@ -37,6 +38,7 @@ GameOver::~GameOver() {
 			LM.writeLog("GameStart reached!");
 			p_o->setActive(true);
 			LM.writeLog("isActive: %d", p_o->isActive());
+			dynamic_cast<GameStart*>(p_o)->stopMusic(); // Stop music
 		}
 	}
 }

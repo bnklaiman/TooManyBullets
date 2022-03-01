@@ -1,4 +1,5 @@
 #include <EventStep.h>
+#include <EventView.h>
 #include <LogManager.h>
 #include <WorldManager.h>
 #include <ResourceManager.h>
@@ -159,6 +160,9 @@ void Player::hit() {
 		setLivesRemaining(getLivesRemaining() - 1);
 		df::Vector p(WM.getBoundary().getHorizontal() / 2, 3 * WM.getBoundary().getVertical() / 4);
 		setPosition(p);
+
+		df::EventView ev("Lives: ", -1, true);
+		WM.onEvent(&ev);
 	} else {
 		WM.markForDelete(this);
 	}

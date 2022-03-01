@@ -2,6 +2,8 @@
 #include <EventStep.h>
 #include <GameManager.h>
 #include <LogManager.h>
+#include <ResourceManager.h>
+#include <ViewObject.h>
 
 #include "Enemy.h"
 #include "GameStart.h"
@@ -17,13 +19,26 @@ GameStart::GameStart() {
 	// Register for step event
 	registerInterest(df::STEP_EVENT);
 	registerInterest(df::KEYBOARD_EVENT);
+
+	// Set music and pause. (we only want to play during gameplay (i.e. the inverse of Saucer Shoot)
+	p_music = RM.getMusic("music");
+	stopMusic();
 }
 
 void GameStart::start() {
+	playMusic();
+
 	Player* player = new Player();
 	LM.writeLog("New player created.");
 	new Enemy;
 	LM.writeLog("New enemy created.");
+
+	df::ViewObject* p_lives = new df::ViewObject; // Count of lives
+	p_lives->setLocation(df::TOP_LEFT);
+	p_lives->setViewString("Lives: ");
+	p_lives->setValue(player->getLivesRemaining());
+	p_lives->setColor(df::YELLOW);
+
 	setActive(false);
 	LM.writeLog("GameStart set to inactive.");
 }
@@ -54,4 +69,12 @@ int GameStart::eventHandler(const df::Event* p_e) {
 // Override default draw so as not to display "value"
 int GameStart::draw() {
 	return df::Object::draw();
+}
+
+void GameStart::playMusic() {
+	p_music->play();
+}
+
+void GameStart::stopMusic() {
+	p_music->stop();
 }
