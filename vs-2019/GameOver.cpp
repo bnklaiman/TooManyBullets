@@ -56,7 +56,6 @@ void GameOver::step() {
 	time_to_live--;
 	if (time_to_live <= 0) {
 		WM.markForDelete(this);
-		LM.writeLog("baleeted!");
 	}
 }
 

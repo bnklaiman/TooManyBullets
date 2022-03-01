@@ -8,6 +8,7 @@
 #include "Bullet.h"
 #include "Explosion.h"
 #include "GameOver.h"
+#include "Player.h"
 
 Bullet::Bullet(df::Vector initialPosition, bool newDeleteOnOut) {
 	setSprite("bullet");
@@ -70,27 +71,14 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 	}
 
 	if ((p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player") && shooter != "Player") {
-		WM.markForDelete(p_collision_event->getObject1());
-		WM.markForDelete(p_collision_event->getObject2());
-
 		if (p_collision_event->getObject1()->getType() == "Player") {
-			Explosion* p_explosion = new Explosion;
-
-			// Play "player hit" sound
-			df::Sound* p_sound = RM.getSound("playerhit");
-			p_sound->play();
-
-			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
+			WM.markForDelete(p_collision_event->getObject2());
+			Player* p = dynamic_cast<Player*>(p_collision_event->getObject1());
+			p->hit();
 		} else if (p_collision_event->getObject2()->getType() == "Player") {
-			Explosion* p_explosion = new Explosion;
-
-			// Play "player hit" sound
-			df::Sound* p_sound = RM.getSound("playerhit");
-			p_sound->play();
-
-			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
+			WM.markForDelete(p_collision_event->getObject1());
+			Player* p = dynamic_cast<Player*>(p_collision_event->getObject2());
+			p->hit();
 		}
-
-		new GameOver;
 	}
 }

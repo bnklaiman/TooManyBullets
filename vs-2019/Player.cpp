@@ -6,6 +6,7 @@
 #include <Sound.h>
 
 #include "Bullet.h"
+#include "Explosion.h"
 #include "GameOver.h"
 #include "HeroBullet.h"
 #include "Player.h"
@@ -27,10 +28,11 @@ Player::Player() {
 	fireCooldown = fireSlowdown;
 
 	slowmode = false;
+
+	livesRemaining = 3;
 }
 
 Player::~Player() {
-	// Create GameOver object
 	new GameOver;
 }
 
@@ -144,4 +146,29 @@ void Player::fire() {
 		s1->shooter = getType();
 		s2->shooter = getType();
 	}
+}
+
+void Player::hit() {
+	Explosion* p_explosion = new Explosion;
+	p_explosion->setPosition(getPosition());
+	// Play "player hit" sound
+	df::Sound* p_sound = RM.getSound("playerhit");
+	p_sound->play();
+
+	if (getLivesRemaining() > 0) {
+		setLivesRemaining(getLivesRemaining() - 1);
+		df::Vector p(WM.getBoundary().getHorizontal() / 2, 3 * WM.getBoundary().getVertical() / 4);
+		setPosition(p);
+	} else {
+		WM.markForDelete(this);
+	}
+}
+
+int Player::getLivesRemaining() {
+	return livesRemaining;
+}
+
+void Player::setLivesRemaining(int lives) {
+	livesRemaining = lives;
+	LM.writeLog("# Lives set to %d", livesRemaining);
 }

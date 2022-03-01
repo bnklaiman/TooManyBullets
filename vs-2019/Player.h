@@ -11,9 +11,13 @@ private:
 	int fireSlowdown;
 	int fireCooldown;
 	bool slowmode;
+	int livesRemaining;
 
 public:
 	Player();
 	~Player();
 	int eventHandler(const df::Event* p_e) override;
+	int getLivesRemaining();
+	void setLivesRemaining(int lives);
+	void hit();
 };
