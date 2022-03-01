@@ -35,7 +35,7 @@ void GameStart::start() {
 
 	df::ViewObject* p_lives = new df::ViewObject; // Count of lives
 	p_lives->setLocation(df::TOP_LEFT);
-	p_lives->setViewString("Lives: ");
+	p_lives->setViewString("Lives:");
 	p_lives->setValue(player->getLivesRemaining());
 	p_lives->setColor(df::YELLOW);
 
