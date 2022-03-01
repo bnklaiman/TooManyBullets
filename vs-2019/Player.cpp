@@ -161,7 +161,7 @@ void Player::hit() {
 		df::Vector p(WM.getBoundary().getHorizontal() / 2, 3 * WM.getBoundary().getVertical() / 4);
 		setPosition(p);
 
-		df::EventView ev("Lives: ", -1, true);
+		df::EventView ev("Lives:", -1, true);
 		WM.onEvent(&ev);
 	} else {
 		WM.markForDelete(this);

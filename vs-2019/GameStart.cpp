@@ -5,6 +5,7 @@
 #include <ResourceManager.h>
 #include <ViewObject.h>
 
+#include "Boss.h"
 #include "Enemy.h"
 #include "GameStart.h"
 #include "Player.h"
@@ -32,6 +33,8 @@ void GameStart::start() {
 	LM.writeLog("New player created.");
 	new Enemy;
 	LM.writeLog("New enemy created.");
+	new Boss;
+	LM.writeLog("New boss created.");
 
 	df::ViewObject* p_lives = new df::ViewObject; // Count of lives
 	p_lives->setLocation(df::TOP_LEFT);

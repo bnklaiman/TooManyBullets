@@ -14,6 +14,7 @@
 void loadResources() {
 	RM.loadSprite("sprites/player-chr.txt", "player");
 	RM.loadSprite("sprites/enemy-chr.txt", "enemy");
+	RM.loadSprite("sprites/boss-chr.txt", "boss");
 	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
 	RM.loadSprite("sprites/hero-bullet-spr.txt", "herobullet");
 	RM.loadSprite("sprites/explosion-spr.txt", "explosion");

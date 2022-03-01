@@ -1,0 +1,28 @@
+<HEADER>
+frames 2
+width 11
+height 7
+color red
+slowdown 2
+</HEADER>
+<BODY>
+     |     
+     |     
+##   |   ##
+ ##  |  ## 
+   #/|\#   
+  ##(O)##  
+##       ##
+end
+     |     
+     |     
+  ## | ##  
+  ## | ##  
+   #/|\#   
+  ##(O)##  
+  ##   ##  
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

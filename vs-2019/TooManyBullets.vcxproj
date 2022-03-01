@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Explosion.h" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Explosion.cpp" />
@@ -172,6 +174,7 @@
   <ItemGroup>
     <Text Include="..\df-config.txt" />
     <Text Include="..\dragonfly.log" />
+    <Text Include="..\sprites\boss-chr.txt" />
     <Text Include="..\sprites\bullet-spr.txt" />
     <Text Include="..\sprites\explosion-spr.txt" />
     <Text Include="..\sprites\gameover-spr.txt" />
