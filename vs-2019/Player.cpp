@@ -11,6 +11,7 @@
 #include "GameOver.h"
 #include "HeroBullet.h"
 #include "Player.h"
+#include "AddPointsEvent.h"
 
 Player::Player() {
 	// Set up "player" sprite
@@ -18,6 +19,8 @@ Player::Player() {
 
 	registerInterest(df::KEYBOARD_EVENT);
 	registerInterest(df::STEP_EVENT);
+	registerInterest(POINTS_ADD_EVENT);
+
 
 	// Set object type
 	setType("Player");
@@ -31,12 +34,9 @@ Player::Player() {
 	slowmode = false;
 
 	livesRemaining = 3;
-<<<<<<< HEAD
 	score = 0;
-=======
 
 	hitbox = new PlayerHitbox(this);
->>>>>>> b67c732808ddde7c4662e5a22cd07063bba93985
 }
 
 Player::~Player() {
@@ -56,6 +56,9 @@ int Player::eventHandler(const df::Event* p_e) {
 		if (fireCooldown < 0) {
 			fireCooldown = 0;
 		}
+	} else if (p_e->getType() == POINTS_ADD_EVENT) {
+		const AddPointsEvent* pAE = dynamic_cast<const AddPointsEvent*> (p_e);
+		setScore(getScore() + pAE->getPointsDelta());
 	}
 	// LM.writeLog("current step: %d", step);
 	return 0;
@@ -197,4 +200,6 @@ int Player::getScore() {
 
 void Player::setScore(int newScore) {
 	score = newScore;
+	df::EventView ev("Score:", newScore, true);
+	WM.onEvent(&ev);
 }

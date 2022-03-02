@@ -48,6 +48,9 @@
     <ClCompile Include="PlayerHitbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AddPointsEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\sprites\player-chr.txt">
@@ -113,6 +116,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PlayerHitbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddPointsEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

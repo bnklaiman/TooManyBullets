@@ -27,7 +27,6 @@ public:
 	int eventHandler(const df::Event* p_e) override;
 	int getLivesRemaining();
 	void setLivesRemaining(int lives);
-	void hit();
 	void graze();
 	int getScore();
 	void setScore(int newScore);

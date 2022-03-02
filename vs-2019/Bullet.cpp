@@ -11,6 +11,7 @@
 #include "Explosion.h"
 #include "GameOver.h"
 #include "Player.h"
+#include "AddPointsEvent.h"
 
 #define ENEMY_POINT_VALUE 100
 
@@ -74,8 +75,7 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 
 			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
 
-			p = dynamic_cast<Player*>(p_collision_event->getObject2());
-			p->setScore(p->getScore() + ENEMY_POINT_VALUE);
+			
 		} else if (p_collision_event->getObject2()->getType() == "Enemy") {
 			Explosion* p_explosion = new Explosion;
 
@@ -84,10 +84,9 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 			p_sound->play();
 
 			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
-
-			p = dynamic_cast<Player*>(p_collision_event->getObject1());
-			// p->setScore(p->getScore() + ENEMY_POINT_VALUE);
 		}
+		AddPointsEvent* pAE = new AddPointsEvent(ENEMY_POINT_VALUE);
+		WM.onEvent(pAE);
 	}
 
 	// a bullet hit a boss
