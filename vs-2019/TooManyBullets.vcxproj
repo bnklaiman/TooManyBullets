@@ -160,6 +160,7 @@
     <ClInclude Include="GameStart.h" />
     <ClInclude Include="HeroBullet.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerHitbox.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\game.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="HeroBullet.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerHitbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\df-config.txt" />

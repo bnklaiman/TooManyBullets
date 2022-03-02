@@ -45,6 +45,9 @@
     <ClCompile Include="EnemyManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerHitbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\sprites\player-chr.txt">
@@ -107,6 +110,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EnemyManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerHitbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -29,7 +29,7 @@ int EnemyManager::eventHandler(const df::Event* p_e) {
 			bossHealth = 5000;
 
 			p_boss_hp = new df::ViewObject; // Count of lives
-			p_boss_hp->setLocation(df::TOP_CENTER);
+			p_boss_hp->setLocation(df::BOTTOM_CENTER);
 			p_boss_hp->setViewString("Boss:");
 			p_boss_hp->setValue(bossHealth);
 			p_boss_hp->setColor(df::RED);
