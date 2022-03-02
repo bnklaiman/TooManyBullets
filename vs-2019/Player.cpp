@@ -40,6 +40,7 @@ Player::Player() {
 }
 
 Player::~Player() {
+	WM.markForDelete(hitbox);
 	new GameOver;
 }
 
@@ -66,7 +67,7 @@ int Player::eventHandler(const df::Event* p_e) {
 
 // Take appropriate action according to key pressed
 void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
-	float moveSpeed = 0.2;
+	float moveSpeed = 0.15;
 	if (slowmode) moveSpeed *= 0.5;
 	float charWidth = df::charWidth(); //DM.getHorizontalPixels() / DM.getHorizontal();
 	float charHeight = df::charHeight() / 3;  //DM.getVerticalPixels() / DM.getVertical();
@@ -74,33 +75,37 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 	case df::Keyboard::W:
 	case df::Keyboard::UPARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, -moveSpeed * charHeight);
-		LM.writeLog("^");
+		// LM.writeLog("^");
 		break;
 	case df::Keyboard::A:
 	case df::Keyboard::LEFTARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(-moveSpeed * charWidth, 0);
-		LM.writeLog("<");
+		// LM.writeLog("<");
 		break;
 	case df::Keyboard::S:
 	case df::Keyboard::DOWNARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, moveSpeed * charHeight);
-		LM.writeLog(">");
+		// LM.writeLog(">");
 		break;
 	case df::Keyboard::D:
 	case df::Keyboard::RIGHTARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(moveSpeed * charWidth, 0);
+		// LM.writeLog("v");
 		break;
 	case df::Keyboard::Z:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) fire();
+		// LM.writeLog("Z");
 		break;
 	case df::Keyboard::Q:
 		// quit
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED) WM.markForDelete(this);
+		// LM.writeLog("Q");
 		break;
 	case df::Keyboard::LEFTSHIFT:
 	case df::Keyboard::RIGHTSHIFT:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) slowmode = true;
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_RELEASED) slowmode = false;
+		// LM.writeLog("SHIFT");
 	}
 }
 

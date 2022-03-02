@@ -32,7 +32,7 @@ void GameStart::start() {
 
 	Player* player = new Player();
 	LM.writeLog("New player created.");
-	new EnemyManager;
+	new EnemyManager(GM.getStepCount());
 
 	df::ViewObject* p_lives = new df::ViewObject; // Count of lives
 	p_lives->setLocation(df::TOP_LEFT);
