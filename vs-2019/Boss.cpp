@@ -1,6 +1,7 @@
 #include <WorldManager.h>
 
 #include "Boss.h"
+#include "EventView.h"
 
 Boss::Boss() {
 	setSprite("boss");
@@ -14,9 +15,12 @@ Boss::Boss() {
 }
 
 int Boss::getBossHealth() {
-	return bossHealth;
+	return bossHealth < 0? 0 : bossHealth;
 }
 
 void Boss::setBossHealth(int health) {
 	bossHealth = health;
+	if (bossHealth < 0) bossHealth = 0;
+	df::EventView ev("Boss:", bossHealth, false);
+	WM.onEvent(&ev);
 }

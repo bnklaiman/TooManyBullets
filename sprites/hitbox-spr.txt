@@ -1,14 +1,11 @@
 <HEADER>
 frames 1
-width 5
-height 3
-color red
-slowdown 5
+width 1
+height 1
+color white
 </HEADER>
 <BODY>
- /^\ 
-/ o \
-\___/
+O
 end
 </BODY>
 <FOOTER>

@@ -39,6 +39,14 @@ int Bullet::eventHandler(const df::Event* p_e) {
 	return 0;
 }
 
+bool Bullet::getHasGrazed() const {
+	return hasGrazed;
+}
+
+void Bullet::setHasGrazed(bool grazed) {
+	hasGrazed = grazed;
+}
+
 // If Bullet moves outside world, mark self for deletion
 void Bullet::out() {
 	WM.markForDelete(this);
@@ -47,6 +55,7 @@ void Bullet::out() {
 // If Bullet hits enemy, mark Enemy and Bullet for deletion
 void Bullet::hit(const df::EventCollision* p_collision_event) {
 	
+	// a bullet hit an enemy
 	if (((p_collision_event->getObject1()->getType() == "Enemy") ||
 		(p_collision_event->getObject2()->getType() == "Enemy")) 
 		&& shooter != "Enemy") {
@@ -72,6 +81,7 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		}
 	}
 
+	// a bullet hit a boss
 	Boss* b;
 	if (p_collision_event->getObject1()->getType() == "Boss") {
 		b = dynamic_cast<Boss*>(p_collision_event->getObject1());
@@ -89,27 +99,49 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		}
 	}
 
+	// something in general hit a boss... this and the above can be compacted
 	if (((p_collision_event->getObject1()->getType() == "Boss") ||
 		(p_collision_event->getObject2()->getType() == "Boss"))
 		&& shooter != "Enemy") {
-		df::EventView ev("Boss:", -100, true);
-		WM.onEvent(&ev);
 		b->setBossHealth(b->getBossHealth() - 100);
 		if (b->getBossHealth() <= 0) {
 			LM.writeLog("Boss health depleted!");
 		}
 	}
 
+	// player grazed a bulet
 	Player* p;
+	Bullet* bu;
 	if ((p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player") && shooter != "Player") {
 		if (p_collision_event->getObject1()->getType() == "Player") {
-			WM.markForDelete(p_collision_event->getObject2());
 			p = dynamic_cast<Player*>(p_collision_event->getObject1());
-			p->hit();
+			bu = dynamic_cast<Bullet*>(p_collision_event->getObject2());
+			if (!bu->getHasGrazed()) {
+				bu->setHasGrazed(true);
+				p->graze();
+			}
 		} else if (p_collision_event->getObject2()->getType() == "Player") {
-			WM.markForDelete(p_collision_event->getObject1());
 			p = dynamic_cast<Player*>(p_collision_event->getObject2());
-			p->hit();
+			bu = dynamic_cast<Bullet*>(p_collision_event->getObject1());
+			if (!bu->getHasGrazed()) {
+				bu->setHasGrazed(true);
+				p->graze();
+			}
+		}
+	}
+
+	// player hitbox got hit 
+	PlayerHitbox* pb;
+	if ((p_collision_event->getObject1()->getType() == "PlayerHitbox" || p_collision_event->getObject2()->getType() == "PlayerHitbox") && shooter != "Player") {
+		if (p_collision_event->getObject1()->getType() == "PlayerHitbox") {
+			WM.markForDelete(p_collision_event->getObject2());
+			pb = dynamic_cast<PlayerHitbox*>(p_collision_event->getObject1());
+			pb->hit();
+		}
+		else if (p_collision_event->getObject2()->getType() == "PlayerHitbox") {
+			WM.markForDelete(p_collision_event->getObject1());
+			pb = dynamic_cast<PlayerHitbox*>(p_collision_event->getObject2());
+			pb->hit();
 		}
 	}
 }

@@ -31,6 +31,8 @@ Player::Player() {
 	slowmode = false;
 
 	livesRemaining = 3;
+
+	hitbox = new PlayerHitbox(this);
 }
 
 Player::~Player() {
@@ -65,14 +67,17 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 	case df::Keyboard::W:
 	case df::Keyboard::UPARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, -moveSpeed * charHeight);
+		LM.writeLog("^");
 		break;
 	case df::Keyboard::A:
 	case df::Keyboard::LEFTARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(-moveSpeed * charWidth, 0);
+		LM.writeLog("<");
 		break;
 	case df::Keyboard::S:
 	case df::Keyboard::DOWNARROW:
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) move(0, moveSpeed * charHeight);
+		LM.writeLog(">");
 		break;
 	case df::Keyboard::D:
 	case df::Keyboard::RIGHTARROW:
@@ -104,6 +109,7 @@ void Player::move(float dx, float dy) {
 	if ((new_pos.getY() > 1) && (new_pos.getY() < WM.getBoundary().getVertical() - (getBox().getVertical() / 2)) &&
 	   (new_pos.getX() > 1) && (new_pos.getX() < WM.getBoundary().getHorizontal() - (getBox().getHorizontal() / 2))) {
 		WM.moveObject(this, new_pos);
+		WM.moveObject(hitbox, getPosition());
 	}
 }
 
@@ -160,11 +166,13 @@ void Player::hit() {
 		setLivesRemaining(getLivesRemaining() - 1);
 		df::Vector p(WM.getBoundary().getHorizontal() / 2, 3 * WM.getBoundary().getVertical() / 4);
 		setPosition(p);
+		hitbox->setPosition(getPosition());
 
 		df::EventView ev("Lives:", -1, true);
 		WM.onEvent(&ev);
 	} else {
 		WM.markForDelete(this);
+		WM.markForDelete(hitbox);
 	}
 }
 
@@ -175,4 +183,8 @@ int Player::getLivesRemaining() {
 void Player::setLivesRemaining(int lives) {
 	livesRemaining = lives;
 	LM.writeLog("# Lives set to %d", livesRemaining);
+}
+
+void Player::graze() {
+
 }
