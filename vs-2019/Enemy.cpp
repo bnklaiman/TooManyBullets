@@ -49,7 +49,10 @@ void Enemy::step() {
 	// if its been longer than our attack threshold, we have a chance to fire.
 	if (stepsSinceLastAttack > attackThreshold) {
 		float chance = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-		if (chance > 0.97) {
+		if (chance > 0.98) {
+			shotgunAttack();
+			stepsSinceLastAttack = 0;
+		} else if (chance > 0.97) {
 			basicAttack();
 			stepsSinceLastAttack = 0;
 		}
@@ -97,5 +100,25 @@ void Enemy::tryToMove() {
 void Enemy::basicAttack() {
 	Bullet* b = new Bullet(getPosition(), true);
 	b->shooter = getType();
-	b->setVelocity(df::Vector(0, 3));
+	b->setDirection(df::Vector(0, 3));
+	b->setSpeed(0.5);
+}
+
+void Enemy::shotgunAttack() {
+	Bullet* b = new Bullet(getPosition() + df::Vector(-3, 0.5), true);
+	Bullet* b1 = new Bullet(getPosition() + df::Vector(-1, 0.5), true);
+	Bullet* b2 = new Bullet(getPosition() + df::Vector(1, 0.5), true);
+	Bullet* b3 = new Bullet(getPosition() + df::Vector(3, 0.5), true);
+	b->shooter = getType();
+	b1->shooter = getType();
+	b2->shooter = getType();
+	b3->shooter = getType();
+	b->setDirection(df::Vector(-0.5, 3));
+	b1->setDirection(df::Vector(-0.1, 3));
+	b2->setDirection(df::Vector(0.1, 3));
+	b3->setDirection(df::Vector(0.5, 3));
+	b->setSpeed(0.25);
+	b1->setSpeed(0.25);
+	b2->setSpeed(0.25);
+	b3->setSpeed(0.25);
 }
