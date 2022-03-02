@@ -7,6 +7,8 @@
 
 class PlayerHitbox;
 
+const int GRAZE_POINTS = 25;
+
 class Player : public df::Object {
 private:
 	void kbd(const df::EventKeyboard* p_keyboard_event);

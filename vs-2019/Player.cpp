@@ -168,6 +168,7 @@ void Player::hit() {
 	// Play "player hit" sound
 	df::Sound* p_sound = RM.getSound("playerhit");
 	p_sound->play();
+	setScore(getScore() - 25);
 
 	if (getLivesRemaining() > 0) {
 		setLivesRemaining(getLivesRemaining() - 1);
@@ -191,7 +192,7 @@ void Player::setLivesRemaining(int lives) {
 }
 
 void Player::graze() {
-
+	setScore(getScore() + GRAZE_POINTS);
 }
 
 int Player::getScore() {
@@ -200,6 +201,6 @@ int Player::getScore() {
 
 void Player::setScore(int newScore) {
 	score = newScore;
-	df::EventView ev("Score:", newScore, true);
+	df::EventView ev("Score:", newScore, false);
 	WM.onEvent(&ev);
 }

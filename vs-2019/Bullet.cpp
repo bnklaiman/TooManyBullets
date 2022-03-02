@@ -28,6 +28,7 @@ Bullet::Bullet(df::Vector initialPosition, bool newDeleteOnOut) {
 	
 	// Make the Bullets soft so can pass through stuff
 	setSolidness(df::SOFT);
+	hasGrazed = false;
 }
 
 int Bullet::eventHandler(const df::Event* p_e) {
@@ -124,17 +125,13 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		if (p_collision_event->getObject1()->getType() == "Player") {
 			p = dynamic_cast<Player*>(p_collision_event->getObject1());
 			bu = dynamic_cast<Bullet*>(p_collision_event->getObject2());
-			if (!bu->getHasGrazed()) {
-				bu->setHasGrazed(true);
-				p->graze();
-			}
 		} else if (p_collision_event->getObject2()->getType() == "Player") {
 			p = dynamic_cast<Player*>(p_collision_event->getObject2());
 			bu = dynamic_cast<Bullet*>(p_collision_event->getObject1());
-			if (!bu->getHasGrazed()) {
-				bu->setHasGrazed(true);
-				p->graze();
-			}
+		}
+		if (!bu->getHasGrazed()) {
+			bu->setHasGrazed(true);
+			p->graze();
 		}
 	}
 
@@ -144,12 +141,11 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		if (p_collision_event->getObject1()->getType() == "PlayerHitbox") {
 			WM.markForDelete(p_collision_event->getObject2());
 			pb = dynamic_cast<PlayerHitbox*>(p_collision_event->getObject1());
-			pb->hit();
 		}
 		else if (p_collision_event->getObject2()->getType() == "PlayerHitbox") {
 			WM.markForDelete(p_collision_event->getObject1());
 			pb = dynamic_cast<PlayerHitbox*>(p_collision_event->getObject2());
-			pb->hit();
 		}
+		pb->hit();
 	}
 }
