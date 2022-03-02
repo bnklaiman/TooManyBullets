@@ -11,7 +11,7 @@ class EnemyManager : public df::Object {
 private:
 	bool isBossPresent;
 	int stepsElapsed;
-	int bossHealth;
+	int bossStartingHealth;
 	df::ViewObject* p_boss_hp;
 	int stepsAdjustment;
 	bool bossNotSpawnedYet;

@@ -12,7 +12,7 @@
 EnemyManager::EnemyManager(int stepsAdjust) {
 	isBossPresent = false;
 	stepsElapsed = 0;
-	bossHealth = 5000;
+	bossStartingHealth = 5000;
 	p_boss_hp = nullptr;
 	stepsAdjustment = stepsAdjust;
 	bossNotSpawnedYet = true;
@@ -41,7 +41,7 @@ void EnemyManager::gameScript() {
 }
 
 void EnemyManager::spawnBoss() {
-	new Boss(bossHealth);
+	new Boss(bossStartingHealth);
 	LM.writeLog("New boss created.");
 	isBossPresent = true;
 	bossNotSpawnedYet = false;
@@ -49,7 +49,7 @@ void EnemyManager::spawnBoss() {
 	p_boss_hp = new df::ViewObject; // Count of lives
 	p_boss_hp->setLocation(df::BOTTOM_CENTER);
 	p_boss_hp->setViewString("Boss:");
-	p_boss_hp->setValue(bossHealth);
+	p_boss_hp->setValue(bossStartingHealth);
 	p_boss_hp->setColor(df::RED);
 }
 
