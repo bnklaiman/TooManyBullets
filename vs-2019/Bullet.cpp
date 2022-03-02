@@ -1,10 +1,12 @@
 #include <EventOut.h>
 #include <EventStep.h>
+#include <EventView.h>
 #include <LogManager.h>
 #include <ResourceManager.h>
 #include <Sound.h>
 #include <WorldManager.h>
 
+#include "Boss.h"
 #include "Bullet.h"
 #include "Explosion.h"
 #include "GameOver.h"
@@ -70,14 +72,43 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		}
 	}
 
+	Boss* b;
+	if (p_collision_event->getObject1()->getType() == "Boss") {
+		b = dynamic_cast<Boss*>(p_collision_event->getObject1());
+		if (b->getBossHealth() <= 0) {
+			WM.markForDelete(p_collision_event->getObject1());
+		} else {
+			WM.markForDelete(p_collision_event->getObject2());
+		}
+	} else if (p_collision_event->getObject2()->getType() == "Boss") {
+		b = dynamic_cast<Boss*>(p_collision_event->getObject2());
+		if (b->getBossHealth() <= 0) {
+			WM.markForDelete(p_collision_event->getObject2());
+		} else {
+			WM.markForDelete(p_collision_event->getObject1());
+		}
+	}
+
+	if (((p_collision_event->getObject1()->getType() == "Boss") ||
+		(p_collision_event->getObject2()->getType() == "Boss"))
+		&& shooter != "Enemy") {
+		df::EventView ev("Boss:", -100, true);
+		WM.onEvent(&ev);
+		b->setBossHealth(b->getBossHealth() - 100);
+		if (b->getBossHealth() <= 0) {
+			LM.writeLog("Boss health depleted!");
+		}
+	}
+
+	Player* p;
 	if ((p_collision_event->getObject1()->getType() == "Player" || p_collision_event->getObject2()->getType() == "Player") && shooter != "Player") {
 		if (p_collision_event->getObject1()->getType() == "Player") {
 			WM.markForDelete(p_collision_event->getObject2());
-			Player* p = dynamic_cast<Player*>(p_collision_event->getObject1());
+			p = dynamic_cast<Player*>(p_collision_event->getObject1());
 			p->hit();
 		} else if (p_collision_event->getObject2()->getType() == "Player") {
 			WM.markForDelete(p_collision_event->getObject1());
-			Player* p = dynamic_cast<Player*>(p_collision_event->getObject2());
+			p = dynamic_cast<Player*>(p_collision_event->getObject2());
 			p->hit();
 		}
 	}

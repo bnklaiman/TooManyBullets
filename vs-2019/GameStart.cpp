@@ -7,6 +7,7 @@
 
 #include "Boss.h"
 #include "Enemy.h"
+#include "EnemyManager.h"
 #include "GameStart.h"
 #include "Player.h"
 
@@ -31,16 +32,13 @@ void GameStart::start() {
 
 	Player* player = new Player();
 	LM.writeLog("New player created.");
-	new Enemy;
-	LM.writeLog("New enemy created.");
-	new Boss;
-	LM.writeLog("New boss created.");
+	new EnemyManager;
 
 	df::ViewObject* p_lives = new df::ViewObject; // Count of lives
 	p_lives->setLocation(df::TOP_LEFT);
 	p_lives->setViewString("Lives:");
 	p_lives->setValue(player->getLivesRemaining());
-	p_lives->setColor(df::YELLOW);
+	p_lives->setColor(df::WHITE);
 
 	setActive(false);
 	LM.writeLog("GameStart set to inactive.");
