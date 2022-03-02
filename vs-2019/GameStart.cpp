@@ -40,6 +40,12 @@ void GameStart::start() {
 	p_lives->setValue(player->getLivesRemaining());
 	p_lives->setColor(df::WHITE);
 
+	df::ViewObject* p_score = new df::ViewObject; // Score
+	p_score->setLocation(df::TOP_RIGHT);
+	p_score->setViewString("Score:");
+	p_score->setValue(player->getScore());
+	p_score->setColor(df::YELLOW);
+
 	setActive(false);
 	LM.writeLog("GameStart set to inactive.");
 }

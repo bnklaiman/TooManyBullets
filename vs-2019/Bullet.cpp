@@ -12,6 +12,8 @@
 #include "GameOver.h"
 #include "Player.h"
 
+#define ENEMY_POINT_VALUE 100
+
 Bullet::Bullet(df::Vector initialPosition, bool newDeleteOnOut) {
 	setSprite("bullet");
 	setType("Bullet");
@@ -53,6 +55,7 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		WM.markForDelete(p_collision_event->getObject1());
 		WM.markForDelete(p_collision_event->getObject2());
 		
+		Player* p;
 		if (p_collision_event->getObject1()->getType() == "Enemy") {
 			Explosion* p_explosion = new Explosion;
 
@@ -61,6 +64,9 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 			p_sound->play();
 
 			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
+
+			p = dynamic_cast<Player*>(p_collision_event->getObject2());
+			p->setScore(p->getScore() + ENEMY_POINT_VALUE);
 		} else if (p_collision_event->getObject2()->getType() == "Enemy") {
 			Explosion* p_explosion = new Explosion;
 
@@ -69,6 +75,9 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 			p_sound->play();
 
 			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
+
+			p = dynamic_cast<Player*>(p_collision_event->getObject1());
+			// p->setScore(p->getScore() + ENEMY_POINT_VALUE);
 		}
 	}
 

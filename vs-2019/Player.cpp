@@ -31,6 +31,7 @@ Player::Player() {
 	slowmode = false;
 
 	livesRemaining = 3;
+	score = 0;
 }
 
 Player::~Player() {
@@ -175,4 +176,12 @@ int Player::getLivesRemaining() {
 void Player::setLivesRemaining(int lives) {
 	livesRemaining = lives;
 	LM.writeLog("# Lives set to %d", livesRemaining);
+}
+
+int Player::getScore() {
+	return score;
+}
+
+void Player::setScore(int newScore) {
+	score = newScore;
 }
