@@ -12,7 +12,7 @@
 EnemyManager::EnemyManager(int stepsAdjust) {
 	isBossPresent = false;
 	stepsElapsed = 0;
-	bossHealth = 0;
+	bossHealth = 5000;
 	p_boss_hp = nullptr;
 	stepsAdjustment = stepsAdjust;
 	bossNotSpawnedYet = true;
@@ -24,30 +24,38 @@ EnemyManager::EnemyManager(int stepsAdjust) {
 
 int EnemyManager::eventHandler(const df::Event* p_e) {
 	if (p_e->getType() == df::STEP_EVENT) {
-		stepsElapsed++;
-		if (stepsElapsed >= (MUSIC_CLIMAX_TIME * 30) && !isBossPresent && bossNotSpawnedYet) {
-			new Boss;
-			LM.writeLog("New boss created.");
-			isBossPresent = true;
-			bossNotSpawnedYet = false;
-			bossHealth = 5000;
-
-			p_boss_hp = new df::ViewObject; // Count of lives
-			p_boss_hp->setLocation(df::BOTTOM_CENTER);
-			p_boss_hp->setViewString("Boss:");
-			p_boss_hp->setValue(bossHealth);
-			p_boss_hp->setColor(df::RED);
-		}
-
-		if (isBossPresent && p_boss_hp->getValue() <= 0) {
-			isBossPresent = false;
-			p_boss_hp->setVisible(false);
-			WM.markForDelete(p_boss_hp);
-			LM.writeLog("Should have deleted the boss hp ViewObject");
-		}
-
+		gameScript();
 		return 1;
 	}
-
 	return 0;
+}
+
+void EnemyManager::gameScript() {
+	stepsElapsed++;
+	if (stepsElapsed >= (MUSIC_CLIMAX_TIME * 30) && !isBossPresent && bossNotSpawnedYet) {
+		spawnBoss();
+	}
+	if (isBossPresent && p_boss_hp->getValue() <= 0) {
+		cleanUpAfterBoss();
+	}
+}
+
+void EnemyManager::spawnBoss() {
+	new Boss(bossHealth);
+	LM.writeLog("New boss created.");
+	isBossPresent = true;
+	bossNotSpawnedYet = false;
+
+	p_boss_hp = new df::ViewObject; // Count of lives
+	p_boss_hp->setLocation(df::BOTTOM_CENTER);
+	p_boss_hp->setViewString("Boss:");
+	p_boss_hp->setValue(bossHealth);
+	p_boss_hp->setColor(df::RED);
+}
+
+void EnemyManager::cleanUpAfterBoss() {
+	isBossPresent = false;
+	p_boss_hp->setVisible(false);
+	WM.markForDelete(p_boss_hp);
+	LM.writeLog("Should have deleted the boss hp ViewObject");
 }

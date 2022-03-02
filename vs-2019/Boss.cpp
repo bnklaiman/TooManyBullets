@@ -10,8 +10,13 @@ Boss::Boss() {
 	int world_horiz = (int)WM.getBoundary().getHorizontal();
 	int world_vert = (int)WM.getBoundary().getVertical();
 	df::Vector p(world_horiz / 2, world_vert / 4);
+	bossHealth = 1000;
 
 	setPosition(p);
+}
+
+Boss::Boss(int startingHealth) : Boss() {
+	bossHealth = startingHealth;
 }
 
 int Boss::getBossHealth() {

@@ -9,6 +9,7 @@ private:
 
 public:
 	Boss();
+	Boss(int startingHealth);
 	int getBossHealth();
 	void setBossHealth(int health);
 };

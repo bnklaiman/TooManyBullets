@@ -15,6 +15,11 @@ private:
 	df::ViewObject* p_boss_hp;
 	int stepsAdjustment;
 	bool bossNotSpawnedYet;
+	void gameScript();
+
+	void spawnBoss();
+
+	void cleanUpAfterBoss();
 
 public:
 	EnemyManager(int stepsAdjust);
