@@ -3,7 +3,7 @@ frames 12
 width 67
 height 4
 color cyan
-slowdown 15
+slowdown 10
 </HEADER>
 <BODY>
  dP""b8                                                            

@@ -13,8 +13,18 @@ private:
 	int moveStepsRemaining;
 	int moveThreshold;
 
+	int starAttackThreshold;
+	int stepsSinceStarAttack;
+	int starAttackBurstFiredCount;
+	int starAttackBurstCount;
+	int starAttackBurstThreshold;
+	int stepsSinceStarAttackBurstFired;
+	bool inStarAttack;
+
 	void tryToMove();
 	void step();
+	void tryStartingStarAttack();
+	void tryStarBurst();
 
 public:
 	Boss();

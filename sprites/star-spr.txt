@@ -2,14 +2,14 @@
 frames 1
 width 7
 height 3
-color yellow
+color cyan
 </HEADER>
 <BODY>
- ./|\, 
-<-=O=->
- '\|/` 
+ ./O\, 
+<OOOOO>
+ '\O/` 
 end
 </BODY>
 <FOOTER>
-version 1
+version 2
 </FOOTER>

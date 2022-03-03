@@ -31,7 +31,12 @@ GameOver::~GameOver() {
 	df::ObjectListIterator i(&object_list);
 	for (i.first(); !i.isDone(); i.next()) {
 		df::Object* p_o = i.currentObject();
-		if (p_o->getType() == "Enemy" || p_o->getType() == "ViewObject" || p_o->getType() == "PlayerHitbox" || p_o->getType() == "EnemyManager") {
+		if (p_o->getType() == "Enemy" || 
+			p_o->getType() == "ViewObject" || 
+			p_o->getType() == "PlayerHitbox" || 
+			p_o->getType() == "EnemyManager" ||
+			p_o->getType() == "Boss" ||
+			p_o->getType() == "Bullet") {
 			WM.markForDelete(p_o);
 		}
 		if (p_o->getType() == "GameStart") {
