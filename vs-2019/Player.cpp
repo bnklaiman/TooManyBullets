@@ -39,6 +39,8 @@ Player::Player() {
 	hitbox = new PlayerHitbox(this);
 
 	iframes = 0;
+
+	bombs = 3;
 }
 
 Player::~Player() {
@@ -122,6 +124,9 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_DOWN) slowmode = true;
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_RELEASED) slowmode = false;
 		// LM.writeLog("SHIFT");
+		break;
+	case df::Keyboard::X:
+		if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED) bomb();
 	}
 }
 
@@ -229,4 +234,23 @@ void Player::setScore(int newScore) {
 	score = newScore;
 	df::EventView ev("Score:", newScore, false);
 	WM.onEvent(&ev);
+}
+
+int Player::getBombs() const {
+	return bombs;
+}
+
+void Player::bomb() {
+	df::ObjectList ol = WM.getAllObjects();
+	df::ObjectListIterator* li = new df::ObjectListIterator(&ol);
+	while (!li->isDone()) {
+		df::Object* obj = li->currentObject();
+		if (obj->getType() == "Bullet" || obj->getType() == "HeroBullet") {
+			WM.markForDelete(obj);
+		}
+		li->next();
+	}
+	bombs--;
+	df::EventView* pEV = new df::EventView("Bombs:", -1, true);
+	WM.onEvent(pEV);
 }

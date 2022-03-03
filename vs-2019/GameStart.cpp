@@ -46,6 +46,12 @@ void GameStart::start() {
 	p_score->setValue(player->getScore());
 	p_score->setColor(df::YELLOW);
 
+	df::ViewObject* pBombs = new df::ViewObject; // bombs
+	pBombs->setLocation(df::TOP_CENTER);
+	pBombs->setViewString("Bombs:");
+	pBombs->setValue(player->getBombs());
+	pBombs->setColor(df::YELLOW);
+
 	setActive(false);
 	LM.writeLog("GameStart set to inactive.");
 }

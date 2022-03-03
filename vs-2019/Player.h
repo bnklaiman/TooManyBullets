@@ -20,8 +20,10 @@ private:
 	int livesRemaining;
 	PlayerHitbox* hitbox;
 	int iframes;
+	int bombs;
 	
 	int score;
+	void bomb();
 
 public:
 	Player();
@@ -33,4 +35,6 @@ public:
 	void graze();
 	int getScore();
 	void setScore(int newScore);
+	int getBombs() const;
+	
 };
