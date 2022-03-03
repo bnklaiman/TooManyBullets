@@ -179,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\df-config.txt" />
-    <Text Include="..\dragonfly.log" />
     <Text Include="..\sprites\boss-chr.txt" />
     <Text Include="..\sprites\bullet-spr.txt" />
     <Text Include="..\sprites\explosion-spr.txt" />

@@ -5,10 +5,10 @@
 #include "EnemyManager.h"
 #include "WorldManager.h"
 
-// time in seconds when the music hits its high the point and the boss appears
+// time in seconds when the music hits its high point and the boss appears
 // #define MUSIC_CLIMAX_TIME 71.9
 
-#define MUSIC_CLIMAX_TIME 71.9
+#define MUSIC_CLIMAX_TIME 2
 
 EnemyManager::EnemyManager(int stepsAdjust) {
 	setType("EnemyManager");

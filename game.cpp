@@ -28,6 +28,7 @@ void loadResources() {
 	RM.loadSound("sfx/plst00.wav", "fire");
 	RM.loadSound("sfx/tan00.wav", "enemyhit");
 	RM.loadSound("sfx/pldead00.wav", "playerhit");
+	RM.loadSound("sfx/enep01.wav", "bossdown");
 
 	RM.loadMusic("music/necrofantasia-bk.ogg", "music");
 }

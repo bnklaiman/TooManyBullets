@@ -16,8 +16,8 @@ slowdown 15
     88""Yb Y8   8P 88  .o 88  .o 88""     88   o.`Y8b     
     88oodP `YbodP' 88ood8 88ood8 888888   88   8bodP'     
                                                           
-     Controls:  W  /  ^  moves, 'Z' fires, 'q' quits      
-               ASD   <v>                                  
+ Controls:  W  /  ^  to move, Z / COMMA to fire, Q to quit
+           ASD   <v>          X / PERIOD to use bomb      
                                                           
               Hold SHIFT to focus your fire.              
                                                           
@@ -33,8 +33,8 @@ end
     88""Yb Y8   8P 88  .o 88  .o 88""     88   o.`Y8b     
     88oodP `YbodP' 88ood8 88ood8 888888   88   8bodP'     
                                                           
-     Controls:  W  /  ^  moves, 'Z' fires, 'q' quits      
-               ASD   <v>                                  
+ Controls:  W  /  ^  to move, Z / COMMA to fire, Q to quit
+           ASD   <v>          X / PERIOD to use bomb      
                                                           
               Hold SHIFT to focus your fire.              
                                                           

@@ -62,9 +62,6 @@
     <Text Include="..\sprites\enemy-chr.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\dragonfly.log">
-      <Filter>Resource Files</Filter>
-    </Text>
     <Text Include="..\df-config.txt">
       <Filter>Resource Files</Filter>
     </Text>

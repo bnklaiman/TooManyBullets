@@ -68,21 +68,24 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		WM.markForDelete(p_collision_event->getObject2());
 		
 		Player* p;
+		df::Sound* p_sound;
+		Explosion* p_explosion;
+
 		if (p_collision_event->getObject1()->getType() == "Enemy") {
-			Explosion* p_explosion = new Explosion;
+			p_explosion = new Explosion;
 
 			// Play "enemy hit" sound
-			df::Sound* p_sound = RM.getSound("enemyhit");
+			p_sound = RM.getSound("enemyhit");
 			p_sound->play();
 
 			p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
 
 			
 		} else if (p_collision_event->getObject2()->getType() == "Enemy") {
-			Explosion* p_explosion = new Explosion;
+			p_explosion = new Explosion;
 
 			// Play "enemy hit" sound
-			df::Sound* p_sound = RM.getSound("enemyhit");
+			p_sound = RM.getSound("enemyhit");
 			p_sound->play();
 
 			p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
@@ -93,6 +96,7 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 
 	// a bullet hit a boss
 	Boss* b;
+	Explosion* p_explosion;
 	// something in general hit a boss... this and the above can be compacted
 	if (((p_collision_event->getObject1()->getType() == "Boss") ||
 		(p_collision_event->getObject2()->getType() == "Boss"))
@@ -110,11 +114,44 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 		b->setBossHealth(b->getBossHealth() - 100);
 		if (b->getBossHealth() <= 0) {
 			LM.writeLog("Boss health depleted!");
-		}
-
-		
-		if (b->getBossHealth() <= 0) {
 			WM.markForDelete(b);
+
+			Explosion* p_explosion = new Explosion;
+			Explosion* p_explosion1 = new Explosion;
+			Explosion* p_explosion2 = new Explosion;
+			Explosion* p_explosion3 = new Explosion;
+			Explosion* p_explosion4 = new Explosion;
+			Explosion* p_explosion5 = new Explosion;
+			Explosion* p_explosion6 = new Explosion;
+			Explosion* p_explosion7 = new Explosion;
+			Explosion* p_explosion8 = new Explosion;
+			df::Sound* p_sound;
+
+			if (p_collision_event->getObject1()->getType() == "Boss") {
+				p_sound = RM.getSound("bossdown");
+				p_sound->play();
+				p_explosion->setPosition(p_collision_event->getObject1()->getPosition());
+				p_explosion1->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(0, -2));
+				p_explosion2->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(3, -3));
+				p_explosion3->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(5, 0));
+				p_explosion4->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(3, 3));
+				p_explosion5->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(0, 2));
+				p_explosion6->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(-3, 3));
+				p_explosion7->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(-5, 0));
+				p_explosion8->setPosition(p_collision_event->getObject1()->getPosition() + df::Vector(-3, -3));
+			} else if (p_collision_event->getObject2()->getType() == "Boss") {
+				p_sound = RM.getSound("bossdown");
+				p_sound->play();
+				p_explosion->setPosition(p_collision_event->getObject2()->getPosition());
+				p_explosion1->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(0, -2));
+				p_explosion2->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(3, -3));
+				p_explosion3->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(5, 0));
+				p_explosion4->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(3, 3));
+				p_explosion5->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(0, 2));
+				p_explosion6->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(-3, 3));
+				p_explosion7->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(-5, 0));
+				p_explosion8->setPosition(p_collision_event->getObject2()->getPosition() + df::Vector(-3, -3));
+			}
 		}
 	}
 
