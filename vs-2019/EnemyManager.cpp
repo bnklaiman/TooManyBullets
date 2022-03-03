@@ -48,7 +48,7 @@ void EnemyManager::gameScript() {
 
 void EnemyManager::randomSpawn() {
 	float chance = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-	if (chance > 0.25) {
+	if (chance > 0.75) {
 		Enemy* e = new Enemy();
 
 		int worldWidth = (int)WM.getBoundary().getHorizontal();

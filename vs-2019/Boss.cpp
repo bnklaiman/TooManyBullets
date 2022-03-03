@@ -103,7 +103,7 @@ void Boss::step() {
 
 	stepsSinceLastAttack++;
 	if (stepsSinceLastAttack > attackThreshold) {
-		circleAttack(2, 18);
+		circleAttack(2, 25);
 		stepsSinceLastAttack = 0;
 	}
 }
