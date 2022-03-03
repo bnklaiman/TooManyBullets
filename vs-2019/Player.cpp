@@ -26,7 +26,7 @@ Player::Player() {
 	setType("Player");
 	df::Vector p(WM.getBoundary().getHorizontal() / 2,  3 * WM.getBoundary().getVertical() / 4);
 	setPosition(p);
-	setSolidness(df::HARD);
+	setSolidness(df::SOFT);
 
 	fireSlowdown = 3;
 	fireCooldown = fireSlowdown;
@@ -167,13 +167,13 @@ void Player::fire() {
 	}
 }
 
-void Player::hit() {
+void Player::hit(bool byBullet) {
 	Explosion* p_explosion = new Explosion;
 	p_explosion->setPosition(getPosition());
 	// Play "player hit" sound
 	df::Sound* p_sound = RM.getSound("playerhit");
 	p_sound->play();
-	setScore(getScore() - 25);
+	if(byBullet) setScore(getScore() - 25);
 
 	if (getLivesRemaining() > 0) {
 		setLivesRemaining(getLivesRemaining() - 1);

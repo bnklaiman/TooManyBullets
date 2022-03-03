@@ -25,7 +25,7 @@ private:
 public:
 	Player();
 	~Player();
-	void hit();
+	void hit(bool byBullet);
 	int eventHandler(const df::Event* p_e) override;
 	int getLivesRemaining();
 	void setLivesRemaining(int lives);

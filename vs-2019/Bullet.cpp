@@ -145,6 +145,6 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 			WM.markForDelete(p_collision_event->getObject1());
 			pb = dynamic_cast<PlayerHitbox*>(p_collision_event->getObject2());
 		}
-		pb->hit();
+		pb->hit(true);
 	}
 }

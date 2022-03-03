@@ -9,6 +9,7 @@ private:
 	Player* parent;
 public:
 	PlayerHitbox(Player* player);
-	void hit();
+	void hit(bool byBullet);
+	int eventHandler(const df::Event* p_e) override;
 };
 
