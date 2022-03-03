@@ -63,10 +63,7 @@ int Player::eventHandler(const df::Event* p_e) {
 		}
 		// flashing effect for iframes
 		if (iframes > 0) {
-			if((iframes < 80 && iframes > 70) ||
-				(iframes < 60 && iframes > 50) ||
-				(iframes < 40 && iframes > 30) ||
-				(iframes < 20 && iframes > 10)) {
+			if (iframes % 3 == 0) {
 				setVisible(false);
 			} else {
 				setVisible(true);
