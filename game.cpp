@@ -23,6 +23,7 @@ void loadResources() {
 	RM.loadSprite("sprites/circle-flash-bullet-spr.txt", "circleflashbullet");
 	RM.loadSprite("sprites/hitbox-spr.txt", "PlayerHitbox");
 	RM.loadSprite("sprites/star-spr.txt", "Star");
+	RM.loadSprite("sprites/simple-bullet-spr.txt", "SimpleBullet");
 
 	RM.loadSound("sfx/plst00.wav", "fire");
 	RM.loadSound("sfx/tan00.wav", "enemyhit");

@@ -23,7 +23,7 @@ Boss::Boss() {
 	setPosition(p);
 
 	stepsSinceLastAttack = 0;
-	attackThreshold = 30;
+	attackThreshold = 175;
 
 	stepsSinceMove = 60;
 	moveStepsRemaining = 0;
@@ -100,6 +100,12 @@ void Boss::step() {
 	if (inStarAttack) {
 		tryStarBurst();
 	}
+
+	stepsSinceLastAttack++;
+	if (stepsSinceLastAttack > attackThreshold) {
+		circleAttack(2, 18);
+		stepsSinceLastAttack = 0;
+	}
 }
 
 void Boss::tryStartingStarAttack() {
@@ -160,4 +166,45 @@ void Boss::tryToMove() {
 		setDirection(df::Vector(x, y));
 		setSpeed(0.15);
 	}
+}
+
+void Boss::circleAttack(int numCircles, int numBullets) {
+	df::Vector center = getPosition();
+	float radius = 5 + (rand() % static_cast<int>(7 - 5 + 1));
+	float dTheta = 360.0f / numBullets;
+	// initial position of bullets (bottom of circle)
+	
+	df::Vector initPos = df::Vector(center.getX(), center.getY() - radius);
+	Bullet* b;
+	for (int j = 0; j < numCircles; j++) {
+		for (int i = 0; i < numBullets; i++) {
+			// rotate by deltadeg * i
+			float theta = dTheta * i;
+			df::Vector pos = rotatePos(initPos, center, theta);
+			// find normal from the circle... 
+			df::Vector normal = df::Vector(pos.getX() - center.getX(), pos.getY() - center.getY());
+			// assign attributes to bullet
+			b = new Bullet(pos, true);
+			b->setSprite("SimpleBullet");
+			b->shooter = "Enemy";
+			b->setDirection(normal);
+			b->setSpeed(0.05);
+		}
+		radius += 1;
+		initPos = df::Vector(center.getX(), center.getY() - radius);
+		initPos = rotatePos(initPos, center, 25 * j);
+	}
+	
+}
+
+df::Vector Boss::rotatePos(df::Vector point, df::Vector center, float theta) {
+	float x = point.getX() - center.getX();
+	float y = point.getY() - center.getY();
+
+	float xPrime = x * cos(theta) - y * sin(theta);
+	float yPrime = x * sin(theta) + y * cos(theta);
+
+	// create new point with new values
+	df::Vector pos = df::Vector(xPrime + center.getX(), yPrime + center.getY());
+	return pos;
 }

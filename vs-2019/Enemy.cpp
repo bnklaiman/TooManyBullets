@@ -120,24 +120,24 @@ void Enemy::shotgunAttack() {
 	b1->setDirection(df::Vector(-0.1, 3));
 	b2->setDirection(df::Vector(0.1, 3));
 	b3->setDirection(df::Vector(0.5, 3));
-	b->setSpeed(0.25);
-	b1->setSpeed(0.25);
-	b2->setSpeed(0.25);
-	b3->setSpeed(0.25);
+	b->setSpeed(0.2);
+	b1->setSpeed(0.2);
+	b2->setSpeed(0.2);
+	b3->setSpeed(0.2);
 }
 
 void Enemy::biggerShotgun() {
 	int x = -4;
 	int dx = 1;
-	float xVelocity = -1.5;
-	float dxVelocity = 3.0f / 9;
+	float xVelocity = -2;
+	float dxVelocity = 4.0f / 9;
 	Bullet* b;
 	for (int i = 0; i < 9; i++) {
 		b = new Bullet(getPosition(), true);
 		b->shooter = getType();
 		b->setPosition(b->getPosition() + df::Vector(x, 0.5));
 		b->setDirection(df::Vector(xVelocity, 3));
-		b->setSpeed(0.25);
+		b->setSpeed(0.2);
 		x += dx;
 		xVelocity += dxVelocity;
 	}

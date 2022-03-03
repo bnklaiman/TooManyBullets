@@ -1,88 +1,85 @@
-03:13:35    0 ****************************************************
-03:13:35    0 ** Dragonfly version 4.16 **
-03:13:35    0 ** Game engine started **
-03:13:35    0 ****************************************************
-03:13:35    0 Log Manager started.
-03:13:35    0 -----------------------------------
-03:13:35    0 Dragonfly configuration:
-03:13:35    0   Window horizontal pixels: 700
-03:13:35    0   Window vertical pixels: 900
-03:13:35    0   Window horizontal characters: 72
-03:13:35    0   Window vertical characters: 50
-03:13:35    0   Window background color: 0
-03:13:35    0   Frame time: 33
-03:13:35    0   Window style: default
-03:13:35    0   Window title: TooManyBullets
-03:13:35    0   Show mouse: false
-03:13:35    0   Headless: false
-03:13:35    0   Font file: df-font.ttf
-03:13:35    0   Log file: dragonfly.log
-03:13:35    0   Random seed: 0
-03:13:35    0   Networking: false
-03:13:35    0   Scene graph: simple
-03:13:35    0 -----------------------------------
-03:13:35    0 Display manager started.
-03:13:35    0 Input manager started.
-03:13:36    0 Resource manager started.
-03:13:36    0 Scenegraph configuration: SIMPLE
-03:13:36    0 World manager started.
-03:13:36    0 Path manager started.
-03:13:36    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
-03:13:36    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
-03:13:36    0 RM::loadSprite(): Sprite 'player' loaded.
-03:13:36    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
-03:13:36    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'enemy' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/boss-chr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/boss-chr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'boss' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'bullet' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/hero-bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/hero-bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'herobullet' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/explosion-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'explosion' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/gamestart-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'gamestart' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/gameover-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'gameover' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/circle-flash-bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/circle-flash-bullet-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'circleflashbullet' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/hitbox-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/hitbox-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'PlayerHitbox' loaded.
-03:13:37    0 RM::loadSprite(): Loading sprite 'sprites/star-spr.txt'.
-03:13:37    0 RM::loadSprite(): Opened file 'sprites/star-spr.txt'.
-03:13:37    0 RM::loadSprite(): Sprite 'Star' loaded.
-03:13:37    0 RM::loadSound(): Sound 'fire' successfully loaded.
-03:13:37    0 RM::loadSound(): Sound 'enemyhit' successfully loaded.
-03:13:37    0 RM::loadSound(): Sound 'playerhit' successfully loaded.
-03:13:37    0 RM::loadMusic(): Music 'music' successfully loaded.
-03:13:37    0 GameManager::run(): starting game loop
-03:13:37    1 GameManager::run(): Can't keep up! frame_time 33 ms, split 34 ms
-03:13:37    2 GameManager::run(): Can't keep up! frame_time 33 ms, split 33 ms
-03:13:38   21 New player created.
-03:13:38   21 New enemy created.
-03:13:38   21 GameStart set to inactive.
-03:13:39   51 New boss created.
-03:13:42  132 Boss health depleted!
-03:13:42  132 Boss health depleted!
-03:13:42  133 Should have deleted the boss hp ViewObject
-03:13:51  413 InputManager::getInput(): Window close event. Setting game over.
-03:13:51  414 GameManager::run(): end of game loop
-03:13:51  414 Path manager stopped
-03:13:51  414 GameStart reached!
-03:13:51  414 isActive: 1
-03:13:51  414 Manager::shutDown(): Warning! WorldManager not started.
-03:13:51  414 World manager stopped
-03:13:51  414 Resource manager stopped
-03:13:51  414 Input manager stopped
-03:13:51  414 Display manager stopped
-03:13:51  414 ****************************************************
-03:13:51  414 ** Game engine stopped **
+04:07:28    0 ****************************************************
+04:07:28    0 ** Dragonfly version 4.16 **
+04:07:28    0 ** Game engine started **
+04:07:28    0 ****************************************************
+04:07:28    0 Log Manager started.
+04:07:28    0 -----------------------------------
+04:07:28    0 Dragonfly configuration:
+04:07:28    0   Window horizontal pixels: 700
+04:07:28    0   Window vertical pixels: 900
+04:07:28    0   Window horizontal characters: 72
+04:07:28    0   Window vertical characters: 50
+04:07:28    0   Window background color: 0
+04:07:28    0   Frame time: 33
+04:07:28    0   Window style: default
+04:07:28    0   Window title: TooManyBullets
+04:07:28    0   Show mouse: false
+04:07:28    0   Headless: false
+04:07:28    0   Font file: df-font.ttf
+04:07:28    0   Log file: dragonfly.log
+04:07:28    0   Random seed: 0
+04:07:28    0   Networking: false
+04:07:28    0   Scene graph: simple
+04:07:28    0 -----------------------------------
+04:07:29    0 Display manager started.
+04:07:29    0 Input manager started.
+04:07:30    0 Resource manager started.
+04:07:30    0 Scenegraph configuration: SIMPLE
+04:07:30    0 World manager started.
+04:07:30    0 Path manager started.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/player-chr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/player-chr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'player' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/enemy-chr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/enemy-chr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'enemy' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/boss-chr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/boss-chr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'boss' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'bullet' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/hero-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/hero-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'herobullet' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/explosion-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/explosion-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'explosion' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/gamestart-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/gamestart-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'gamestart' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/gameover-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/gameover-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'gameover' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/circle-flash-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/circle-flash-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'circleflashbullet' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/hitbox-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/hitbox-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'PlayerHitbox' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/star-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/star-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'Star' loaded.
+04:07:30    0 RM::loadSprite(): Loading sprite 'sprites/simple-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Opened file 'sprites/simple-bullet-spr.txt'.
+04:07:30    0 RM::loadSprite(): Sprite 'SimpleBullet' loaded.
+04:07:30    0 RM::loadSound(): Sound 'fire' successfully loaded.
+04:07:30    0 RM::loadSound(): Sound 'enemyhit' successfully loaded.
+04:07:30    0 RM::loadSound(): Sound 'playerhit' successfully loaded.
+04:07:30    0 RM::loadMusic(): Music 'music' successfully loaded.
+04:07:30    0 GameManager::run(): starting game loop
+04:07:31    5 New player created.
+04:07:31    5 New enemy created.
+04:07:31    5 GameStart set to inactive.
+04:07:32   35 New boss created.
+04:07:57  786 GameStart reached!
+04:07:57  786 isActive: 1
+04:07:59  860 GameManager::run(): end of game loop
+04:07:59  860 Path manager stopped
+04:07:59  860 Manager::shutDown(): Warning! WorldManager not started.
+04:07:59  860 World manager stopped
+04:07:59  860 Resource manager stopped
+04:07:59  860 Input manager stopped
+04:07:59  860 Display manager stopped
+04:07:59  860 ****************************************************
+04:07:59  860 ** Game engine stopped **

@@ -25,6 +25,8 @@ private:
 	void step();
 	void tryStartingStarAttack();
 	void tryStarBurst();
+	void circleAttack(int numCircles, int numBullets);
+	df::Vector rotatePos(df::Vector point, df::Vector center, float theta);
 
 public:
 	Boss();
