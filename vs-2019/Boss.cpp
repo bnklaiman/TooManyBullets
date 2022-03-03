@@ -29,6 +29,7 @@ Boss::Boss() {
 	moveStepsRemaining = 0;
 	moveThreshold = 90;
 
+	// config for burst stars
 	starAttackThreshold = 150;
 	stepsSinceStarAttack = 0;
 	starAttackBurstFiredCount = 0;

@@ -13,12 +13,12 @@ private:
 	int moveStepsRemaining;
 	int moveThreshold;
 
-	int starAttackThreshold;
-	int stepsSinceStarAttack;
-	int starAttackBurstFiredCount;
-	int starAttackBurstCount;
-	int starAttackBurstThreshold;
-	int stepsSinceStarAttackBurstFired;
+	int starAttackThreshold;			// how long since the last burst of stars until a new one can st art
+	int stepsSinceStarAttack;			// how long its been since the last burst of stars
+	int starAttackBurstFiredCount;		// how many stars have been fired in the current burst
+	int starAttackBurstCount;			// how many stars are in a burst
+	int starAttackBurstThreshold;		// time between stars in a burst
+	int stepsSinceStarAttackBurstFired;	// how long its been since a star was fired in this burst
 	bool inStarAttack;
 
 	void tryToMove();
