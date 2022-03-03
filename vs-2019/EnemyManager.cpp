@@ -7,9 +7,10 @@
 // time in seconds when the music hits its high the point and the boss appears
 // #define MUSIC_CLIMAX_TIME 71.9
 
-#define MUSIC_CLIMAX_TIME 15
+#define MUSIC_CLIMAX_TIME 1
 
 EnemyManager::EnemyManager(int stepsAdjust) {
+	setType("EnemyManager");
 	isBossPresent = false;
 	stepsElapsed = 0;
 	bossStartingHealth = 5000;

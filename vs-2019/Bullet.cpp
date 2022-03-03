@@ -92,29 +92,28 @@ void Bullet::hit(const df::EventCollision* p_collision_event) {
 
 	// a bullet hit a boss
 	Boss* b;
-	if (p_collision_event->getObject1()->getType() == "Boss") {
-		b = dynamic_cast<Boss*>(p_collision_event->getObject1());
-		if (b->getBossHealth() <= 0) {
-			WM.markForDelete(p_collision_event->getObject1());
-		} else {
-			WM.markForDelete(p_collision_event->getObject2());
-		}
-	} else if (p_collision_event->getObject2()->getType() == "Boss") {
-		b = dynamic_cast<Boss*>(p_collision_event->getObject2());
-		if (b->getBossHealth() <= 0) {
-			WM.markForDelete(p_collision_event->getObject2());
-		} else {
-			WM.markForDelete(p_collision_event->getObject1());
-		}
-	}
-
 	// something in general hit a boss... this and the above can be compacted
 	if (((p_collision_event->getObject1()->getType() == "Boss") ||
 		(p_collision_event->getObject2()->getType() == "Boss"))
 		&& shooter != "Enemy") {
+		
+		if (p_collision_event->getObject1()->getType() == "Boss") {
+			b = dynamic_cast<Boss*>(p_collision_event->getObject1());
+			WM.markForDelete(p_collision_event->getObject2());
+		}
+		else if (p_collision_event->getObject2()->getType() == "Boss") {
+			b = dynamic_cast<Boss*>(p_collision_event->getObject2());
+			WM.markForDelete(p_collision_event->getObject1());
+		}
+
 		b->setBossHealth(b->getBossHealth() - 100);
 		if (b->getBossHealth() <= 0) {
 			LM.writeLog("Boss health depleted!");
+		}
+
+		
+		if (b->getBossHealth() <= 0) {
+			WM.markForDelete(b);
 		}
 	}
 
