@@ -1,5 +1,6 @@
 #include <EventStep.h>
 #include <LogManager.h>
+#include <random>
 
 #include "EnemyManager.h"
 #include "WorldManager.h"
@@ -38,6 +39,30 @@ void EnemyManager::gameScript() {
 	}
 	if (isBossPresent && p_boss_hp->getValue() <= 0) {
 		cleanUpAfterBoss();
+	}
+
+	if (stepsElapsed % 75 == 0) {
+		float chance = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+		if (chance > 0.25) {
+			Enemy* e = new Enemy();
+
+			int worldWidth = (int)WM.getBoundary().getHorizontal();
+			int worldHeight = (int)WM.getBoundary().getVertical();
+			df::ObjectList ol;
+			df::Vector loc;
+			int tries = 0;
+			do {
+				int x = 2 + (rand() % static_cast<int>(worldWidth - 2 + 1));
+				int y = 2 + (rand() % static_cast<int>(((1 * worldHeight) / 4) - 2 + 1));
+				loc = df::Vector(x, y);
+				ol = WM.getCollisions(e, loc);
+				if (tries > 15) {
+					WM.markForDelete(e);
+					return;
+				}
+			} while (!ol.isEmpty());
+			WM.moveObject(e, loc);
+		}
 	}
 }
 
