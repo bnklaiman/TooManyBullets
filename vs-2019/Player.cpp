@@ -179,6 +179,9 @@ void Player::fire() {
 		p->shooter = getType();
 		s1->shooter = getType();
 		s2->shooter = getType();
+		p->setAltitude(3);
+		s1->setAltitude(3);
+		s2->setAltitude(3);
 	}
 }
 

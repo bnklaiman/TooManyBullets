@@ -134,6 +134,7 @@ void Boss::tryStarBurst() {
 			b->setDirection(fireDirection);
 			b->setSpeed(0.01);
 			b->shooter = "Enemy";
+			b->setAltitude(1);
 
 			if (starAttackBurstFiredCount == starAttackBurstCount) {
 				// if we've now fired the full burst, exit the attack.

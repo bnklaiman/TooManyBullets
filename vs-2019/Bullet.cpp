@@ -18,6 +18,7 @@
 Bullet::Bullet(df::Vector initialPosition, bool newDeleteOnOut) {
 	setSprite("bullet");
 	setType("Bullet");
+	setAltitude(2);
 
 	// Set starting location, based on hero's position passed in
 	df::Vector p(initialPosition.getX(), initialPosition.getY());
