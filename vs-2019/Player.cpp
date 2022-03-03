@@ -45,7 +45,6 @@ Player::Player() {
 
 Player::~Player() {
 	WM.markForDelete(hitbox);
-	new GameOver;
 }
 
 // Only respond to "keyboard event"
@@ -134,8 +133,8 @@ void Player::move(float dx, float dy) {
 	}*/
 	if ((new_pos.getY() > 1) && (new_pos.getY() < WM.getBoundary().getVertical() - (getBox().getVertical() / 2)) &&
 	   (new_pos.getX() > 1) && (new_pos.getX() < WM.getBoundary().getHorizontal() - (getBox().getHorizontal() / 2))) {
-		WM.moveObject(this, new_pos);
-		WM.moveObject(hitbox, getPosition());
+		if (hitbox) WM.moveObject(this, new_pos);
+		if (hitbox) WM.moveObject(hitbox, getPosition());
 	}
 }
 
@@ -202,6 +201,7 @@ void Player::hit(bool byBullet) {
 	} else {
 		WM.markForDelete(this);
 		WM.markForDelete(hitbox);
+		new GameOver;
 	}
 }
 

@@ -33,7 +33,7 @@ GameOver::~GameOver() {
 		df::Object* p_o = i.currentObject();
 		if (p_o->getType() == "Enemy" || 
 			p_o->getType() == "ViewObject" || 
-			p_o->getType() == "PlayerHitbox" || 
+			p_o->getType() == "Player" || 
 			p_o->getType() == "EnemyManager" ||
 			p_o->getType() == "Boss" ||
 			p_o->getType() == "Bullet") {

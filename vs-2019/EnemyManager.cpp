@@ -2,19 +2,19 @@
 #include <LogManager.h>
 #include <random>
 
+#include "GameOver.h"
+#include "GameStart.h"
 #include "EnemyManager.h"
 #include "WorldManager.h"
 
 // time in seconds when the music hits its high point and the boss appears
-// #define MUSIC_CLIMAX_TIME 71.9
-
-#define MUSIC_CLIMAX_TIME 2
+#define MUSIC_CLIMAX_TIME 71.9
 
 EnemyManager::EnemyManager(int stepsAdjust) {
 	setType("EnemyManager");
 	isBossPresent = false;
 	stepsElapsed = 0;
-	bossStartingHealth = 5000;
+	bossStartingHealth = 50000;
 	p_boss_hp = nullptr;
 	stepsAdjustment = stepsAdjust;
 	bossNotSpawnedYet = true;
@@ -48,7 +48,7 @@ void EnemyManager::gameScript() {
 
 void EnemyManager::randomSpawn() {
 	float chance = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-	if (chance > 0.75) {
+	if (chance > 0.01) {
 		Enemy* e = new Enemy();
 
 		int worldWidth = (int)WM.getBoundary().getHorizontal();
@@ -88,4 +88,12 @@ void EnemyManager::cleanUpAfterBoss() {
 	p_boss_hp->setVisible(false);
 	WM.markForDelete(p_boss_hp);
 	LM.writeLog("Should have deleted the boss hp ViewObject");
+
+	df::ViewObject* p_you_won = new df::ViewObject;
+	p_you_won->setLocation(df::BOTTOM_CENTER);
+	p_you_won->setViewString("YOU WON!");
+	p_you_won->setDrawValue(false);
+	p_you_won->setColor(df::GREEN);
+
+	new GameOver;
 }
