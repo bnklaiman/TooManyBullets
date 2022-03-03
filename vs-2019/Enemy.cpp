@@ -104,7 +104,7 @@ void Enemy::basicAttack() {
 	Bullet* b = new Bullet(getPosition(), true);
 	b->shooter = getType();
 	b->setDirection(df::Vector(0, 3));
-	b->setSpeed(0.5);
+	b->setSpeed(0.25);
 }
 
 void Enemy::shotgunAttack() {
