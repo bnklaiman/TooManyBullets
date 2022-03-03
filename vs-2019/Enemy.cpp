@@ -49,7 +49,10 @@ void Enemy::step() {
 	// if its been longer than our attack threshold, we have a chance to fire.
 	if (stepsSinceLastAttack > attackThreshold) {
 		float chance = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-		if (chance > 0.98) {
+		if (chance > 0.995) {
+			biggerShotgun();
+			stepsSinceLastAttack = 0;
+		} else if (chance > 0.98) {
 			shotgunAttack();
 			stepsSinceLastAttack = 0;
 		} else if (chance > 0.97) {
@@ -121,4 +124,21 @@ void Enemy::shotgunAttack() {
 	b1->setSpeed(0.25);
 	b2->setSpeed(0.25);
 	b3->setSpeed(0.25);
+}
+
+void Enemy::biggerShotgun() {
+	int x = -4;
+	int dx = 1;
+	float xVelocity = -1.5;
+	float dxVelocity = 3.0f / 9;
+	Bullet* b;
+	for (int i = 0; i < 9; i++) {
+		b = new Bullet(getPosition(), true);
+		b->shooter = getType();
+		b->setPosition(b->getPosition() + df::Vector(x, 0.5));
+		b->setDirection(df::Vector(xVelocity, 3));
+		b->setSpeed(0.25);
+		x += dx;
+		xVelocity += dxVelocity;
+	}
 }

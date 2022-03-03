@@ -71,10 +71,11 @@ int Player::eventHandler(const df::Event* p_e) {
 			}
 			iframes--;
 		}
-		
+		return 1;
 	} else if (p_e->getType() == POINTS_ADD_EVENT) {
 		const AddPointsEvent* pAE = dynamic_cast<const AddPointsEvent*> (p_e);
 		setScore(getScore() + pAE->getPointsDelta());
+		return 1;
 	}
 	// LM.writeLog("current step: %d", step);
 	return 0;

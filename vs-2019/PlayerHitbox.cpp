@@ -24,6 +24,7 @@ int PlayerHitbox::eventHandler(const df::Event* p_e) {
 			// an enemy or boss hit the hitbox
 			hit(false);
 		}
+		return 1;
 	}
 	return 0;
 }

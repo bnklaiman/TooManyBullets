@@ -14,6 +14,7 @@ private:
 	int moveThreshold;			// threshold of steps since last move before we can move again
 	void basicAttack();
 	void shotgunAttack();
+	void biggerShotgun();
 	int eventHandler(const df::Event* p_e) override;
 	void step();
 	void tryToMove();
