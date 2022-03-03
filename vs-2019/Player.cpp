@@ -237,16 +237,21 @@ int Player::getBombs() const {
 }
 
 void Player::bomb() {
-	df::ObjectList ol = WM.getAllObjects();
-	df::ObjectListIterator* li = new df::ObjectListIterator(&ol);
-	while (!li->isDone()) {
-		df::Object* obj = li->currentObject();
-		if (obj->getType() == "Bullet" || obj->getType() == "HeroBullet") {
-			WM.markForDelete(obj);
+	if (bombs > 0) {
+		df::ObjectList ol = WM.getAllObjects();
+		df::ObjectListIterator* li = new df::ObjectListIterator(&ol);
+		DM.shake(30, 30, 3);
+		df::Sound* p_sound = RM.getSound("bomb");
+		p_sound->play();
+		while (!li->isDone()) {
+			df::Object* obj = li->currentObject();
+			if (obj->getType() == "Bullet" || obj->getType() == "HeroBullet") {
+				WM.markForDelete(obj);
+			}
+			li->next();
 		}
-		li->next();
+		bombs--;
+		df::EventView* pEV = new df::EventView("Bombs:", -1, true);
+		WM.onEvent(pEV);
 	}
-	bombs--;
-	df::EventView* pEV = new df::EventView("Bombs:", -1, true);
-	WM.onEvent(pEV);
 }
