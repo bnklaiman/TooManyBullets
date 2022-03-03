@@ -83,6 +83,9 @@
     <Text Include="..\sprites\boss-chr.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="..\dragonfly.log">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h">

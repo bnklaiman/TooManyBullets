@@ -113,6 +113,7 @@ void Player::kbd(const df::EventKeyboard* p_keyboard_event) {
 	case df::Keyboard::Q:
 		// quit
 		if (p_keyboard_event->getKeyboardAction() == df::KEY_PRESSED) WM.markForDelete(this);
+		new GameOver;
 		break;
 	case df::Keyboard::LEFTSHIFT:
 	case df::Keyboard::RIGHTSHIFT:
