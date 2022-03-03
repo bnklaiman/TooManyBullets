@@ -17,6 +17,8 @@ private:
 	bool bossNotSpawnedYet;
 	void gameScript();
 
+	void randomSpawn();
+
 	void spawnBoss();
 
 	void cleanUpAfterBoss();
