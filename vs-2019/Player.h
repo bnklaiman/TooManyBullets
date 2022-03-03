@@ -19,6 +19,7 @@ private:
 	bool slowmode;
 	int livesRemaining;
 	PlayerHitbox* hitbox;
+	int iframes;
 	
 	int score;
 

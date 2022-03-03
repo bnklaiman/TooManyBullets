@@ -1,0 +1,15 @@
+<HEADER>
+frames 1
+width 7
+height 3
+color yellow
+</HEADER>
+<BODY>
+ ./|\, 
+<-=O=->
+ '\|/` 
+end
+</BODY>
+<FOOTER>
+version 1
+</FOOTER>

@@ -37,6 +37,8 @@ Player::Player() {
 	score = 0;
 
 	hitbox = new PlayerHitbox(this);
+
+	iframes = 0;
 }
 
 Player::~Player() {
@@ -57,6 +59,19 @@ int Player::eventHandler(const df::Event* p_e) {
 		if (fireCooldown < 0) {
 			fireCooldown = 0;
 		}
+		// flashing effect for iframes
+		if (iframes > 0) {
+			if((iframes < 80 && iframes > 70) ||
+				(iframes < 60 && iframes > 50) ||
+				(iframes < 40 && iframes > 30) ||
+				(iframes < 20 && iframes > 10)) {
+				setVisible(false);
+			} else {
+				setVisible(true);
+			}
+			iframes--;
+		}
+		
 	} else if (p_e->getType() == POINTS_ADD_EVENT) {
 		const AddPointsEvent* pAE = dynamic_cast<const AddPointsEvent*> (p_e);
 		setScore(getScore() + pAE->getPointsDelta());
@@ -168,6 +183,7 @@ void Player::fire() {
 }
 
 void Player::hit(bool byBullet) {
+	if (iframes > 0) return;
 	Explosion* p_explosion = new Explosion;
 	p_explosion->setPosition(getPosition());
 	// Play "player hit" sound
@@ -180,6 +196,7 @@ void Player::hit(bool byBullet) {
 		df::Vector p(WM.getBoundary().getHorizontal() / 2, 3 * WM.getBoundary().getVertical() / 4);
 		setPosition(p);
 		hitbox->setPosition(getPosition());
+		iframes = 90;
 	} else {
 		WM.markForDelete(this);
 		WM.markForDelete(hitbox);
